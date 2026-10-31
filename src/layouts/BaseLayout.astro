@@ -9,7 +9,7 @@ interface Props {
 const {
   title,
   description = 'Portfolio of Charlie Herbozo-Vidal — Industrial Designer, User Experience Strategist, Creative Lead',
-  passwordProtected = true,
+  passwordProtected = false,
   isSplash = false,
 } = Astro.props;
 
@@ -68,6 +68,7 @@ const workProjects = [
           <button type="submit" class="password-pill-btn" id="passwordSubmitBtn">Submit</button>
         </form>
         <div class="password-error-msg" id="passwordError"></div>
+        <a href="/" class="password-back-link">← Back to Work</a>
       </div>
     )}
 
