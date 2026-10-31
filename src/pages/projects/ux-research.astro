@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="UX Research — Charlie Herbozo-Vidal" passwordProtected={true}>
+  <div class="case-study">
+    <a href="/" class="back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+      Back to Work
+    </a>
+
+    <h1>UX Research</h1>
+    <p class="project-subtitle" style="text-align: center; color: var(--color-muted); margin-bottom: 2rem;">User research at the center of all my projects</p>
+
+    <p class="project-intro">As a seasoned user experience researcher and strategist, I always start projects with asking: What is the root cause of the problem? What does our user really need? Specializing in deciphering complex human behaviors within massive, high-stakes data ecosystems, my research work bridges the gap between raw data and actionable product strategy.</p>
+
+    <p class="project-intro">At enterprise scale, I have led cross-functional discovery and evaluation initiatives—most notably spearheading the foundational research for multi-million dollar Point of Sale (POS) and retail system modernization efforts.</p>
+
+    <p class="project-intro">My methodology relies on rigorous triangulation: synthesizing large-scale quantitative data from millions of transactions and behavioral analytics alongside deep qualitative user insights to uncover high-value growth opportunities. Whether implementing entirely new software systems, mapping intricate operational ecosystems, or leading teams of researchers, I focus on transforming heavy cognitive friction into seamless, intuitive user experiences that drive measurable business value.</p>
+
+    <!-- Top Overview 3-Up Grid -->
+    <div class="image-grid-3">
+        <img src="/images/uxr/live_01.png" alt="UX Research framework 1" />
+        <img src="/images/uxr/live_02.png" alt="UX Research framework 2" />
+        <img src="/images/uxr/live_03.png" alt="UX Research framework 3" />
+      </div>
+
+      <h2>Case Study: Point of Sale Modernization</h2>
+      <p>How do you completely reinvent the transactional engine of a nationwide retail giant? This case study covers the end-to-end discovery and evaluation process I led to modernize CVS's Point of Sale (POS) infrastructure. By triangulating transaction datasets with in-store ethnographic research, my team mapped critical system bottlenecks, paving the way for a streamlined, modernized experience that elevated usability scores to a "Grade A" 88 points.</p>
+
+      <p>The first phase of the project focused on heavy discovery research. Combining methodologies such as In-Store observations, Focus Groups and interviews, with surveys of over 1000 colleagues and customers to truly understand the underlying issues encountered with their experiences at checkout.</p>
+
+      <!-- Survey & Observation Insights (2-Up) -->
+      <div class="image-grid-2">
+        <img src="/images/uxr/live_04.png" alt="In-store observations and survey data 1" loading="lazy" />
+        <img src="/images/uxr/live_05.png" alt="In-store observations and survey data 2" loading="lazy" />
+      </div>
+
+      <p>By establishing a series of keywords that addressed the specific issues colleagues and customers had pointed out, the team was able to create a framework by which to tackle initial ideation. We then proceeded to brainstorm with Stakeholders in business, product and development to generate a Blue Sky or North Star vision for the project.</p>
+
+      <p>As the lead researcher, I was in charge of facilitating the conversation with these stakeholders and synthesizing the findings.</p>
+
+      <img src="/images/uxr/live_06.png" alt="Blue Sky vision and stakeholder synthesis" class="project-image" loading="lazy" />
+
+      <h3>Design Testing and Iteration</h3>
+      <p>Throughout the design process, I led a team of 3 researchers tasked with testing design prototypes and features before development to refine the experience. In total, we performed:</p>
+      <ul>
+        <li>5 separate cycles of user testing</li>
+        <li>50+ Scenarios</li>
+        <li>Tree tests for navigation, Card sorts for hamburger menu structure, Usability testing</li>
+      </ul>
+
+      <p>Once the final experience had been nailed down, the same team performed in-person usability testing with CVS Colleagues to determine the adequacy of the system. I was in charge of organizing, recruiting, and conducting, and oversaw the analysis and share out strategy of the results.</p>
+
+      <img src="/images/uxr/live_07.png" alt="Navigation tree test and card sorting" class="project-image" loading="lazy" />
+
+      <!-- SUS Score Banner (placed before Production Verification) -->
+      <img src="/images/uxr/live_08.png" alt="POS MOD SUS Score 2023 and 2024 (Grade A 88 Points)" class="project-image" loading="lazy" />
+
+      <h2>Case Study: Production Verification</h2>
+      <p>In high-stakes environments like pharmacy retail, design decisions directly impact patient safety and operational compliance. This project highlights the foundational research testing required to design an intelligent, AI-assisted Virtual verification interface. I led the qualitative evaluation and workflow testing with pharmacists to ensure the software minimized cognitive load, built appropriate system trust, and allowed colleagues to rapidly catch and revise Pharmacy Production.</p>
+
+      <h3>The Challenge</h3>
+      <p>The verification team was looking to implement AI software to aid pharmacists in counting pill production and identifying comingling issues during verification, to reduce operational cost. They wanted to determine field sentiment to the idea. I led a team of 2 researchers in conducting this research and evaluating the proposal.</p>
+
+      <h3>The Value</h3>
+      <p>While the initial sentiment seemed positive, the research uncovered a fatal flaw. When pharmacists trusted an imperfect software too much, they paid less attention to the images, and failed to notice production issues. Eventually, this led to erosion in trust and increased operational time. Our team was able to prevent a costly initiative to go live before it was fully refined for use.</p>
+
+      <!-- Verification Interfaces & Findings -->
+      <img src="/images/uxr/live_09.png" alt="Key Generative Insights" class="project-image" loading="lazy" />
+      <div class="image-grid-2">
+        <img src="/images/uxr/live_10.png" alt="Production Verification Testing" loading="lazy" />
+        <img src="/images/uxr/live_11.png" alt="Pharmacist sentiment and speed perception" loading="lazy" />
+      </div>
+    </div>
+</BaseLayout>

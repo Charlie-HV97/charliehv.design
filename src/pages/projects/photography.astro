@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const photos = [
+  { src: '/images/photography/cover.jpg', alt: 'Photography series cover' },
+  { src: '/images/photography/Chandelier Reaction 1.jpg', alt: 'Chandelier Reaction 1' },
+  { src: '/images/photography/Chandelier Reaction 2.jpg', alt: 'Chandelier Reaction 2' },
+  { src: '/images/photography/Chandelier Reaction 3.jpg', alt: 'Chandelier Reaction 3' },
+  { src: '/images/photography/Collaboration 1.jpg', alt: 'Collaboration 1' },
+  { src: '/images/photography/Cup Up close 1.jpg', alt: 'Cup Up close 1' },
+  { src: '/images/photography/Ghosted Pitchers 1.jpg', alt: 'Ghosted Pitchers 1' },
+  { src: '/images/photography/Ghosted Pitchers 2.jpg', alt: 'Ghosted Pitchers 2' },
+  { src: '/images/photography/Ghosted Pitchers 3.jpg', alt: 'Ghosted Pitchers 3' },
+  { src: '/images/photography/Ghosted Plates.jpg', alt: 'Ghosted Plates' },
+  { src: '/images/photography/Utensil 1.jpg', alt: 'Utensil 1' },
+  { src: '/images/photography/Utensil 2.jpg', alt: 'Utensil 2' },
+  { src: '/images/photography/Utensil 3.jpg', alt: 'Utensil 3' },
+  { src: '/images/photography/Utensil 4.jpg', alt: 'Utensil 4' },
+  { src: '/images/photography/Utensils 5.jpg', alt: 'Utensils 5' },
+  { src: '/images/photography/Utensils 6.jpg', alt: 'Utensils 6' },
+  { src: '/images/photography/Utensils 7.jpg', alt: 'Utensils 7' },
+  { src: '/images/photography/Utensils 8.jpg', alt: 'Utensils 8' },
+  { src: '/images/photography/Utensils 9.jpg', alt: 'Utensils 9' },
+];
+---
+
+<BaseLayout title="Photography work — Charlie Herbozo-Vidal" passwordProtected={true}>
+  <div class="case-study">
+    <a href="/" class="back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+      Back to Work
+    </a>
+    <h1>Photography work</h1>
+    <p class="project-subtitle" style="text-align: center; color: var(--color-muted); margin-bottom: 2.5rem;">Materiality, light, and studio craft</p>
+
+    <div class="photo-gallery">
+      {photos.map((p) => (
+        <div class="photo-item">
+          <img src={p.src} alt={p.alt} loading="lazy" />
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .photo-item {
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--color-card-bg);
+  }
+
+  .photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition);
+  }
+
+  .photo-item:hover img {
+    transform: scale(1.02);
+  }
+
+  @media (max-width: 650px) {
+    .photo-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

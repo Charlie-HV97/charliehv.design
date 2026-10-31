@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Specialty Pharmacy — Charlie Herbozo-Vidal" passwordProtected={true}>
+  <div class="case-study">
+    <a href="/" class="back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+      Back to Work
+    </a>
+
+    <h1>Specialty Pharmacy</h1>
+
+    <h2>Case Study: Streamlining "Benefits Verification" Workflows</h2>
+
+    <div class="project-meta-list">
+      <p><span class="meta-label">Role:</span> Lead Product Designer &amp; UX Researcher</p>
+      <p><span class="meta-label">Timeline:</span> April – August 2025</p>
+      <p><span class="meta-label">Impact:</span> Transformed a fragmented legacy task ecosystem into a high-efficiency, data-driven workflow</p>
+    </div>
+
+      <h3>Challenge</h3>
+      <p>CVS Specialty Pharmacy (SPRx) handles incredibly complex medical workflows. One of the high-visibility workflows is "Benefits Verification." The BV representative is tasked with ensuring medication is covered by patient's plans, and that the estimated Co-pays are understood and met by the patient.</p>
+
+      <p>Within the existing system, BV reps were presented with a mountain of information regarding the "current" status of the task, without properly being informed of what the best next action was. This often led to miscalculations in patient estimators, and approval of medication dispensing without a pre-certification or prior authorization check. For CVS, this represented the source of 80% of bad debt.</p>
+
+      <p>The challenge was clear: leverage the existing data, surface the best next action, and build guard-rails to prevent user behavior that leads to dispensed medications that cannot be covered, thus helping patients avoid surprise costs, and prevent loss for the business.</p>
+
+      <!-- Legacy View -->
+      <img src="/images/sprx/live_01.png" alt="Legacy view of a Major Medical task" class="project-image" />
+      <p class="image-caption">Legacy view of a "Major Medical (MAJ) task"</p>
+
+      <h3>Evaluating the Existing Task</h3>
+      <ol>
+        <li>The task prioritizes the end step: The main focus of the task is asking the user: "What action did you take today?"</li>
+        <li>The task prioritizes other open tasks: The task notifies the user that patient has other open tasks, but ignores data required for current task.</li>
+        <li>The task does not contain all information required by the user: BV reps must navigate to different parts of the software to be able to complete this task.</li>
+        <li>The task tracker does not accurately reflect the status of the current task, but of the last approved Prior Authorization, thus confusing the user.</li>
+      </ol>
+
+      <h3>Analyzing the SOP and "Ways of Working"</h3>
+      <p>Partnering with "Workforce", "Product" and "Specialty operations", the team was able to diagram what all potential use cases for a BV rep working this task might be, and the information required for each and every one of them. After ranking them by occurrence frequency and relevance, we were able to identify the pieces of information, and steps that were required to complete the task in an optimal manner. We established a framework by which the BV rep should be able to understand the best next action by answering the following questions:</p>
+      <ul>
+        <li>What information has already been verified and entered?</li>
+        <li>Have I determined if a prior authorization is needed?</li>
+        <li>If so, what is the status of the current authorization?</li>
+      </ul>
+
+      <!-- Workflow Diagram -->
+      <img src="/images/sprx/live_02.png" alt="Major Medical task verification workflow" class="project-image" loading="lazy" />
+      <p class="image-caption">Major Medical task verification workflow (partial). Page 1 of 46</p>
+
+      <h3>Redesign Process: What Information Has Been Verified?</h3>
+      <p>The design process started with iterations on the general structure of a task. Instead of highlighting the "End action and outcome", the redesigned task should highlight what has been already done. The first step is determining if the Insurance Provider has been verified. Below are several iterations worked through for this portion of the workflow.</p>
+
+      <!-- Verified States Iterations (2-up) -->
+      <div class="image-grid-2">
+        <img src="/images/sprx/live_03.png" alt="Provider verification state iteration 1" loading="lazy" />
+        <img src="/images/sprx/live_04.png" alt="Provider verification state iteration 2" loading="lazy" />
+      </div>
+
+      <h3>Redesign Process: What Steps Have Been Completed?</h3>
+      <p>The second step for the task is completing the cost calculator and pre-certification check, which in legacy software were completed outside of the task screen. The decision was made to include them in the current task, to avoid time spent navigating away from the task at hand. The design process included creating several versions of read-only, verified, completed and editable states, to test with users on which one clearly communicated the completion of these steps.</p>
+
+      <!-- Completed Steps UI -->
+      <img src="/images/sprx/live_05.png" alt="Cost calculator and completed states 1" class="project-image" loading="lazy" />
+      <img src="/images/sprx/live_06.png" alt="Cost calculator and completed states 2" class="project-image" loading="lazy" />
+
+      <h3>Redesign Process: How Do I Keep Track of a PA If I Need One?</h3>
+      <p>The task also required proper tracking of a prior authorization with the insurance provider or the medical provider, if one was needed. The team iterated and tested several designs until landing on a tab system that contained dynamic contact information, so the BV rep could follow up with the relevant provider easily.</p>
+
+      <!-- PA Dynamic Contact Tabs (3 tabs) -->
+      <img src="/images/sprx/live_07.png" alt="Prior Authorization follow-up tab 1" class="project-image" loading="lazy" />
+      <img src="/images/sprx/live_08.png" alt="Prior Authorization follow-up tab 2" class="project-image" loading="lazy" />
+      <img src="/images/sprx/live_09.png" alt="Prior Authorization follow-up tab 3" class="project-image" loading="lazy" />
+
+      <h3>Full Redesign: A New Task View</h3>
+      <p>Finally, we re-introduced the actions and outcomes section, but as a sticky footer. Keeping it as accessible as in the legacy software, but de-emphasized to prevent pulling focus from the actual task.</p>
+
+      <!-- Sticky Footer & New Task View -->
+      <img src="/images/sprx/live_10.png" alt="Sticky footer actions and outcomes" class="project-image" loading="lazy" />
+      <img src="/images/sprx/live_11.png" alt="New task view redesign" class="project-image" loading="lazy" />
+
+      <h3>Summary</h3>
+      <p><strong>The Objective:</strong> Transform a fragmented, outdated interface into an intuitive, task-driven ecosystem that clearly communicates the immediate next steps to the user.</p>
+
+      <p><strong>My Approach & Actions:</strong></p>
+      <ul>
+        <li><strong>Discovery & Research:</strong> I led the initial discovery phase, shadowing specialty pharmacy workflows and conducting user interviews to map out pain points, information bottlenecks, and cognitive drop-offs.</li>
+        <li><strong>Systems Thinking:</strong> I mapped the complex data hierarchy, identifying which information was critical for immediate decision-making versus what could be progressively disclosed.</li>
+        <li><strong>Ideation & Prototyping:</strong> I spearheaded the conceptual design phase, translating dense compliance and technical requirements into wireframes and rapid interactive prototypes.</li>
+        <li><strong>The "Next Action" Architecture:</strong> I redesigned the UI layout to center entirely around a unified "Task Center," utilizing smart visual cues to highlight the highest-priority action a BV rep needed to take.</li>
+        <li><strong>Hand-off:</strong> I established a rigorous documentation framework and collaborated closely with engineering teams to ensure a seamless hand-off, maintaining design fidelity and system feasibility.</li>
+      </ul>
+
+      <h2>Case Study: Pharmacist PAl & AI Integration</h2>
+
+    <div class="project-meta-list">
+      <p><span class="meta-label">Role:</span> Lead Product Designer</p>
+      <p><span class="meta-label">Timeline:</span> March 2025</p>
+      <p><span class="meta-label">Impact:</span> Integrated AI in Pharmacist verification to reduce errors and push patient safety forward</p>
+    </div>
+
+    <h3>The Objective</h3>
+    <p>Create an intelligent, human-in-the-loop AI interface that assists pharmacists in rapidly verifying data entry, checking complex dosages, and catching critical patient medical anomalies.</p>
+
+    <h3>My Approach</h3>
+    <ul>
+      <li><strong>The Trust Anchor:</strong> Designed the interface to establish clear UX patterns for AI confidence levels, making it easy for pharmacists to understand why the AI flagged specific medical information.</li>
+      <li><strong>Data Visualization &amp; Flagging:</strong> Developed a visual design framework that dynamically highlights changes or discrepancies in a patient's medical history, allowing pharmacists to quickly review, edit, and prepare to discuss critical revisions with the patient.</li>
+      <li><strong>Cross-functional Alignment:</strong> Partnered intimately with Product Managers and Engineers to ensure the AI's data outputs were visualized in real-time without lagging.</li>
+    </ul>
+
+    <!-- Pharmacist PAl & AI Screen -->
+    <img src="/images/sprx/live_12.png" alt="Pharmacist PAl AI interface" class="project-image" loading="lazy" />
+  </div>
+</BaseLayout>

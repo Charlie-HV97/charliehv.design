@@ -1,0 +1,206 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  passwordProtected?: boolean;
+  isSplash?: boolean;
+}
+
+const {
+  title,
+  description = 'Portfolio of Charlie Herbozo-Vidal — Industrial Designer, User Experience Strategist, Creative Lead',
+  passwordProtected = true,
+  isSplash = false,
+} = Astro.props;
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const workProjects = [
+  { name: 'Loyalty and Strategy', href: '/projects/loyalty-and-strategy' },
+  { name: 'Point of Sale', href: '/projects/point-of-sale' },
+  { name: 'UX Research', href: '/projects/ux-research' },
+  { name: 'Creative Direction', href: '/projects/creative-direction' },
+  { name: 'Design Systems Engineering', href: '/projects/design-systems' },
+  { name: 'Specialty Pharmacy', href: '/projects/specialty-pharmacy' },
+  { name: 'Furniture Design', href: '/projects/furniture-design' },
+  { name: 'Photography work', href: '/projects/photography' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {passwordProtected && (
+      <script is:inline>
+        (function () {
+          try {
+            const HASH = '8a0c3f6e';
+            const KEY = 'chv_auth';
+            const hasLocal = localStorage.getItem(KEY) === HASH;
+            const hasCookie = document.cookie.indexOf(KEY + '=' + HASH) !== -1;
+            if (hasLocal || hasCookie) {
+              document.documentElement.classList.add('authenticated');
+              if (!hasLocal) localStorage.setItem(KEY, HASH);
+              if (!hasCookie) document.cookie = KEY + '=' + HASH + '; path=/; max-age=31536000; SameSite=Lax';
+            }
+          } catch (e) {}
+        })();
+      </script>
+    )}
+  </head>
+  <body>
+    {passwordProtected && (
+      <div class="password-gate-overlay" id="passwordGate">
+        <form class="password-pill-container" id="passwordForm">
+          <input
+            type="password"
+            class="password-pill-input"
+            id="passwordInput"
+            placeholder="Enter password..."
+            autocomplete="off"
+            autofocus
+          />
+          <button type="submit" class="password-pill-btn" id="passwordSubmitBtn">Submit</button>
+        </form>
+        <div class="password-error-msg" id="passwordError"></div>
+      </div>
+    )}
+
+    {isSplash ? (
+      <slot />
+    ) : (
+      <div class="site-layout">
+        <header class="mobile-header">
+          <a href="/" class="mobile-logo">Charlie HV Design</a>
+          <button class="hamburger-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar-header">
+            <a href="/" class="sidebar-logo">
+              Charlie HV<br />Design
+            </a>
+            <div class="sidebar-subtitle">Welcome to my portfolio</div>
+          </div>
+
+          <nav class="sidebar-nav">
+            <a href="/" class={`nav-group-title ${currentPath === '/' ? 'active' : ''}`}>
+              Work
+            </a>
+
+            <div class="nav-sublinks">
+              {workProjects.map((p) => (
+                <a
+                  href={p.href}
+                  class={`nav-sublink ${currentPath === p.href ? 'active' : ''}`}
+                >
+                  {p.name}
+                </a>
+              ))}
+            </div>
+
+            <div class="sidebar-footer-nav">
+              <a
+                href="/about"
+                class={`nav-link-primary ${currentPath === '/about' ? 'active' : ''}`}
+              >
+                About
+              </a>
+              <a
+                href="/contact"
+                class={`nav-link-primary ${currentPath === '/contact' ? 'active' : ''}`}
+              >
+                Contact
+              </a>
+            </div>
+          </nav>
+        </aside>
+
+        <main class={`main-content ${currentPath === '/' ? 'main-content-home' : ''}`}>
+          <slot />
+        </main>
+      </div>
+    )}
+
+    {passwordProtected && (
+      <script is:inline>
+        (function () {
+          const PASS_HASH = '8a0c3f6e';
+          const STORAGE_KEY = 'chv_auth';
+
+          const gate = document.getElementById('passwordGate');
+          const form = document.getElementById('passwordForm');
+          const input = document.getElementById('passwordInput');
+          const error = document.getElementById('passwordError');
+          const btn = document.getElementById('passwordSubmitBtn');
+
+          const hasAuth =
+            localStorage.getItem(STORAGE_KEY) === PASS_HASH ||
+            document.cookie.indexOf(STORAGE_KEY + '=' + PASS_HASH) !== -1;
+
+          if (hasAuth) {
+            document.documentElement.classList.add('authenticated');
+            gate.classList.add('hidden');
+          }
+
+          if (input && btn) {
+            input.addEventListener('input', function () {
+              if (input.value.length > 0) {
+                btn.style.background = '#222222';
+              } else {
+                btn.style.background = '#d6d6d6';
+              }
+            });
+          }
+
+          if (form) {
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+              const entered = input.value.trim();
+              if (entered === 'CharlieHV') {
+                try {
+                  localStorage.setItem(STORAGE_KEY, PASS_HASH);
+                  document.cookie =
+                    STORAGE_KEY +
+                    '=' +
+                    PASS_HASH +
+                    '; path=/; max-age=31536000; SameSite=Lax';
+                } catch (err) {}
+                document.documentElement.classList.add('authenticated');
+                gate.classList.add('hidden');
+              } else {
+                error.textContent = 'Incorrect password. Please try again.';
+                input.value = '';
+                input.focus();
+                if (btn) btn.style.background = '#d6d6d6';
+              }
+            });
+          }
+        })();
+      </script>
+    )}
+
+    <script is:inline>
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const sidebar = document.getElementById('sidebar');
+      if (menuBtn && sidebar) {
+        menuBtn.addEventListener('click', () => {
+          sidebar.classList.toggle('open');
+        });
+      }
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

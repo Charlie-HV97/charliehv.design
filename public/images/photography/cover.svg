@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#141414"/>
+  <circle cx="400" cy="230" r="70" stroke="#333333" stroke-width="6"/>
+  <circle cx="400" cy="230" r="45" stroke="#444444" stroke-width="4"/>
+  <circle cx="400" cy="230" r="18" fill="#555555"/>
+  <rect x="310" y="140" width="180" height="180" rx="16" stroke="#2a2a2a" stroke-width="4"/>
+  <rect x="330" y="120" width="40" height="20" rx="4" fill="#333333"/>
+  <circle cx="460" cy="165" r="8" fill="#e53e3e"/>
+  <text x="400" y="380" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-weight="600" font-size="20" fill="#888888" letter-spacing="2">PHOTOGRAPHY WORK</text>
+</svg>
