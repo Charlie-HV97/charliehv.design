@@ -480,6 +480,35 @@ em {
   display: block;
 }
 
+/* ─── Before & After Comparison Badges ─── */
+.comparison-section {
+  margin: 2.5rem 0 1.5rem;
+}
+
+.comparison-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.comparison-badge.before {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.comparison-badge.after {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
 /* ─── Executive Work Landing Header ─── */
 .work-hero-header {
   display: grid;

@@ -83,48 +83,64 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <h3>The Challenge</h3>
     <p>The Pharmacy Rewards program had high customer interest, but the user experience was fragmented across four distinct technical ecosystems: in-store cashier terminals, self-checkout kiosks, the CVS mobile app, and CVS.com. Customers rarely knew how close they were to earning a reward, and store associates struggled to explain how family accounts linked together.</p>
 
-    <h3>The Solution</h3>
-    <p>I designed a modular reward framework that created visual and interaction parity across all four platforms. Together with front-end engineering, we established synchronized design tokens for tracking progress bars, active earned credits, and redemption prompts.</p>
+    <!-- Before Section -->
+    <div class="comparison-section">
+      <span class="comparison-badge before">Before</span>
+      <h3>Legacy Pharmacy Rewards: Colleague-Facing Friction</h3>
+      <p>We began by auditing the existing pharmacy system to understand why colleagues and patients were frustrated. Our research revealed three core pain points:</p>
+      <ul>
+        <li><strong>Zero Customer Agency:</strong> The interface was exclusively colleague-facing, giving customers no visibility into their earned benefits.</li>
+        <li><strong>Household Linking Confusion:</strong> Colleagues had to navigate ambiguous account selection tables, resulting in frequent linking errors.</li>
+        <li><strong>Missing Feedback:</strong> When a reward was earned, the system gave no confirmation or celebration moment to motivate retail spending.</li>
+      </ul>
 
-    <p>We audited the customer journey to address three major gaps:</p>
-    <ul>
-      <li><strong>Customer Transparency:</strong> Shifted critical reward tracking from colleague-only back-office views to customer-facing screens.</li>
-      <li><strong>Family Account Linking:</strong> Designed clear account management modals that eliminated colleague confusion around multi-member households.</li>
-      <li><strong>Celebration Moments:</strong> Introduced joyful confirmation moments when rewards were issued, encouraging immediate re-engagement in the retail aisles.</li>
-    </ul>
-
-    <!-- Reward component framework & celebration -->
-    <img src="/images/lnp/live_18.png" alt="Reward component framework across platforms" class="project-image" loading="lazy" />
-    <img src="/images/lnp/live_19.png" alt="Synchronized reward tracking visualization" class="project-image" loading="lazy" />
-    <img src="/images/lnp/live_20.png" alt="Celebration moment UI upon reward issue" class="project-image" loading="lazy" />
-
-    <!-- Current experience pain points -->
-    <div class="image-grid-3">
-      <img src="/images/lnp/live_21.png" alt="Current experience pain point analysis 1" loading="lazy" />
-      <img src="/images/lnp/live_22.png" alt="Current experience pain point analysis 2" loading="lazy" />
-      <img src="/images/lnp/live_23.png" alt="Current experience pain point analysis 3" loading="lazy" />
-    </div>
-    <div class="image-grid-2">
-      <img src="/images/lnp/live_24.png" alt="Current experience pain point analysis 4" loading="lazy" />
-      <img src="/images/lnp/live_25.png" alt="Current experience pain point analysis 5" loading="lazy" />
+      <!-- Current experience pain points (Legacy 5-screen flow) -->
+      <div class="image-grid-3">
+        <img src="/images/lnp/live_21.png" alt="Legacy pharmacy rewards: colleague manual entry screen" loading="lazy" />
+        <img src="/images/lnp/live_22.png" alt="Legacy pharmacy rewards: clunky phone lookup keypad" loading="lazy" />
+        <img src="/images/lnp/live_23.png" alt="Legacy pharmacy rewards: ambiguous patient account table" loading="lazy" />
+      </div>
+      <div class="image-grid-2">
+        <img src="/images/lnp/live_24.png" alt="Legacy pharmacy rewards: text-heavy confirmation modal" loading="lazy" />
+        <img src="/images/lnp/live_25.png" alt="Legacy pharmacy rewards: detached in-store status view" loading="lazy" />
+      </div>
     </div>
 
-    <!-- Celebration Screens -->
-    <div class="image-grid-2">
-      <img src="/images/lnp/live_30.png" alt="Celebration: monthly dose of rewards" loading="lazy" />
-      <img src="/images/lnp/live_31.png" alt="Celebration: your rewards are here" loading="lazy" />
-    </div>
+    <!-- After Section -->
+    <div class="comparison-section">
+      <span class="comparison-badge after">After</span>
+      <h3>Redesigned Omnichannel Framework: Transparency &amp; Real-Time Celebration</h3>
+      <p>I designed a modular reward framework that created visual and interaction parity across all four platforms. Together with front-end engineering, we established synchronized design tokens for tracking progress bars, active earned credits, and redemption prompts.</p>
 
-    <!-- Web, App & Base Opt-in -->
-    <div class="image-grid-2">
-      <img src="/images/lnp/live_26.png" alt="Web shop experience integration" loading="lazy" />
-      <img src="/images/lnp/live_27.png" alt="App experience integration" loading="lazy" />
-      <img src="/images/lnp/live_28.png" alt="Digital shop reward utilization" loading="lazy" />
-      <img src="/images/lnp/live_29.png" alt="Reward tracking interface" loading="lazy" />
+      <p>Our solution directly addressed the audit findings:</p>
+      <ul>
+        <li><strong>Customer Transparency:</strong> Shifted critical reward tracking from colleague-only back-office views directly to customer-facing self-checkout and POS screens.</li>
+        <li><strong>Family Account Linking:</strong> Designed clear, customer-friendly account management modals that eliminated colleague confusion around multi-member households.</li>
+        <li><strong>Celebration Moments:</strong> Introduced joyful confirmation moments when rewards were issued, encouraging immediate re-engagement in the retail aisles.</li>
+      </ul>
+
+      <!-- Reward component framework & real-time tracking -->
+      <img src="/images/lnp/live_18.png" alt="Unified reward component framework across 4 software platforms" class="project-image" loading="lazy" />
+      <img src="/images/lnp/live_19.png" alt="Synchronized real-time reward tracking visualization" class="project-image" loading="lazy" />
+      <img src="/images/lnp/live_20.png" alt="Customer-facing celebration moment UI upon reward issue" class="project-image" loading="lazy" />
+
+      <!-- Celebration Screens -->
+      <div class="image-grid-2">
+        <img src="/images/lnp/live_30.png" alt="Celebration: monthly dose of rewards" loading="lazy" />
+        <img src="/images/lnp/live_31.png" alt="Celebration: your rewards are here" loading="lazy" />
+      </div>
+
+      <!-- Web, App & Base Opt-in -->
+      <div class="image-grid-2">
+        <img src="/images/lnp/live_26.png" alt="Web shop experience integration" loading="lazy" />
+        <img src="/images/lnp/live_27.png" alt="App experience integration" loading="lazy" />
+        <img src="/images/lnp/live_28.png" alt="Digital shop reward utilization" loading="lazy" />
+        <img src="/images/lnp/live_29.png" alt="Reward tracking interface" loading="lazy" />
+      </div>
     </div>
 
     <h3>The 6-State Pilot Rollout</h3>
-    <p>We launched a targeted pilot across 6 states. Adoption was immediate—so much so that redemption volumes exceeded our initial financial modeling, requiring our leadership team to strategically recalibrate reward caps before scaling nationwide.</p>
+    <p>We launched a targeted pilot across 6 states. Adoption was immediate, so much so that redemption volumes exceeded our initial financial modeling, requiring our leadership team to strategically recalibrate reward caps before scaling.</p>
 
     <!-- Milestone screens & badge affinity -->
     <div class="image-grid-3">
