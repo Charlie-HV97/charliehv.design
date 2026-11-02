@@ -17,7 +17,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p><span class="meta-label">Leadership Role:</span> Lead Product Designer &amp; Growth Strategist</p>
       <p><span class="meta-label">Scale &amp; Reach:</span> 80M+ Active Members across 9,000+ Stores, Self-Checkout &amp; Mobile</p>
       <p><span class="meta-label">Cross-Functional Partners:</span> VP of Loyalty &amp; Personalization, CRM Marketing, Store Operations, Retail Engineering</p>
-      <p><span class="meta-label">Core Business Impact:</span> Generated <strong>$60M in incremental annual margin</strong>, unlocked <strong>+25,000 new weekly enrollments</strong>, and unified reward mechanics across 4 distinct software platforms.</p>
+      <p><span class="meta-label">Core Business Impact:</span> Generated <strong>$60M in incremental annual margin</strong>, unlocked <strong>+25,000 new weekly enrollments</strong>, drove a <strong>20% reduction in voided transactions</strong>, and unified reward mechanics across 4 distinct software platforms.</p>
     </div>
 
     <p class="project-intro">As design lead for the Loyalty and Consumer Growth track, my goal was to turn routine checkout transactions into long-term customer relationships. By identifying where shoppers were dropping off and simplifying clunky registration requirements, my team optimized enrollment, member retention, and customer lifetime value across both our in-store registers and digital apps.</p>
@@ -28,7 +28,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <p>Around 54% of all in-store transactions at CVS happen at Self-Checkout (SCO). But roughly 60% of those transactions were completely unlinked to an ExtraCare account. At the time, the self-checkout screen didn't highlight the savings customers were missing, nor did it offer a quick way to sign up. If a shopper wanted member pricing, they had to abandon their checkout lane, track down a store associate to enroll them on a separate terminal, or just forfeit their discounts. That friction resulted in massive drop-off.</p>
 
     <h3>The Strategy &amp; Alignment</h3>
-    <p>I led the redesign of the self-checkout onboarding flow with one radical constraint: <strong>make enrollment require only a single, high-intent piece of data—the customer's phone number.</strong></p>
+    <p>I lead the re-design of the self-checkout enrollment flow with one key constraint in mind. Make sure joining ExtraCare® requires only one piece of customer data: their phone number.</p>
 
     <p>Getting this approved required close partnership with our fraud, loss prevention, and retail operations teams. To satisfy security without adding friction at the lane, we designed a split onboarding architecture: collect the phone number instantly in-lane to unlock immediate cart discounts, validate via one-time SMS pin, and defer the rest of the profile setup (email, home address, communication preferences) to a follow-up digital touchpoint on web or mobile.</p>
 
@@ -48,13 +48,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <h3>Business Impact</h3>
     <p>By eliminating the time barrier at the register, enrollment jumped immediately. The flow generated <strong>$60M in incremental year-over-year margin</strong> and drove <strong>25,000 new member enrollments every single week</strong>.</p>
 
-    <p>Behind the simple UI was a robust logic framework: we mapped dozens of edge cases to handle duplicate phone numbers, unlinked household accounts, and anti-gaming rules without slowing down checkout speed.</p>
-
-    <!-- Complex Use Cases: Duplicates, Fraud & Gaming -->
-    <div class="image-grid-2">
-      <img src="/images/lnp/live_09.png" alt="Handling duplicate accounts and colleague lookup" loading="lazy" />
-      <img src="/images/lnp/live_10.png" alt="Fraud prevention and customer account recognition" loading="lazy" />
-    </div>
+    <p>Behind the simple UI was a robust logic framework: as mapped out in our system architecture flow above, we accounted for dozens of edge cases—handling duplicate phone numbers, unlinked household accounts, and anti-gaming rules without slowing down checkout speed.</p>
 
     <h2>Initiative 2: In-Lane Subscription Upgrade (ExtraCare Plus)</h2>
 
@@ -65,7 +59,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <p>I re-architected the subscription upgrade to live natively inside the regular basket transaction. Working directly with our POS software engineering team, we treated the paid membership as an active register SKU. A customer could tap to join, have the monthly fee added right to their running total, and see their newly unlocked ExtraCare Plus discounts applied to the very items in their hands before paying.</p>
 
     <h3>The Impact</h3>
-    <p>We turned an awkward, multi-step void-and-restart process into a seamless one-tap decision. Cashiers became advocates instead of blockers, and in-store conversion for ExtraCare Plus increased dramatically.</p>
+    <p>We turned an awkward, multi-step void-and-restart process into a seamless one-tap decision. By embedding the upgrade directly into the transaction, we achieved a <strong>20% reduction in voided transactions</strong>, turned cashiers into active program advocates, and significantly increased paid ExtraCare Plus conversion across retail stores.</p>
+
+    <!-- ExtraCare Plus Colleague & Customer Entry Points -->
+    <div class="image-grid-2">
+      <img src="/images/lnp/live_09.png" alt="Colleague Terminal: ExtraCare HQ profile view and upgrade prompt" loading="lazy" />
+      <img src="/images/lnp/live_10.png" alt="Customer Self-Checkout: In-lane ExtraCare Plus upgrade intercept" loading="lazy" />
+    </div>
 
     <!-- ExtraCare Plus Checkout SKU & Flow -->
     <div class="image-grid-3">
