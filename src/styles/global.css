@@ -276,6 +276,13 @@ em {
   display: block;
 }
 
+.nav-group-craft {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  margin-top: 1.75rem;
+}
+
 .nav-group-title:hover {
   color: var(--color-muted);
 }
@@ -473,12 +480,12 @@ em {
   display: block;
 }
 
-/* ─── Compact Full-Bleed Work Landing Header ─── */
+/* ─── Executive Work Landing Header ─── */
 .work-hero-header {
   display: grid;
   grid-template-columns: minmax(220px, 340px) 1fr;
   width: 100%;
-  height: 200px;
+  min-height: 240px;
   background: #ffffff;
   border-bottom: 1px solid var(--color-border);
   overflow: hidden;
@@ -487,6 +494,7 @@ em {
 .hero-graphic-section {
   position: relative;
   height: 100%;
+  min-height: 240px;
   overflow: hidden;
   background-color: #4ba0db;
 }
@@ -504,29 +512,69 @@ em {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 3.5rem;
+  padding: 2.25rem 3.5rem;
   height: 100%;
 }
 
 .hero-name {
   font-family: var(--font-heading);
-  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
-  font-weight: 400;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
   line-height: 1.2;
   color: var(--color-heading);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
   text-align: left;
 }
 
 .hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-accent);
+  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.hero-summary {
   font-family: var(--font-body);
   font-size: 0.9375rem;
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--color-subtle);
-  max-width: 480px;
-  margin-bottom: 0.85rem;
+  max-width: 620px;
+  margin-bottom: 1.25rem;
+}
+
+.hero-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn-hero-philosophy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #222222;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 8px 18px;
+  border-radius: 100px;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-hero-philosophy:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .hero-social-row {
@@ -536,8 +584,8 @@ em {
 }
 
 .hero-social-row .social-icon-btn {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
 }
 
 .hero-social-row .social-icon-btn svg {
@@ -545,9 +593,359 @@ em {
   height: 16px;
 }
 
+/* ─── Executive Metrics Ticker ─── */
+.metrics-ticker-section {
+  width: 100%;
+  background: #fbfbfb;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.metrics-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 6%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.metric-val {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.metric-desc {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+
+/* ─── Section Header Blocks ─── */
 .home-work-container {
   padding: 3.5rem 6% 0;
   width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.section-header-block {
+  margin-bottom: 2rem;
+}
+
+.section-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.4vw, 1.875rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-heading);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtext {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: #555555;
+  line-height: 1.55;
+  max-width: 700px;
+}
+
+.section-craft-spacing {
+  margin-top: 4.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* ─── Leadership Strategic Projects Grid ─── */
+.leadership-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  margin-bottom: 3.5rem;
+}
+
+.leadership-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+}
+
+.leadership-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-color: #c8c8c8;
+}
+
+.card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--color-card-bg);
+  overflow: hidden;
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.leadership-card:hover .card-image-wrap img {
+  transform: scale(1.03);
+}
+
+.card-hover-indicator {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(20, 40, 60, 0.85);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border-radius: 100px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.leadership-card:hover .card-hover-indicator {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-category-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 0.65rem;
+}
+
+.card-category {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.card-impact-pill {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  background: #eef5fa;
+  color: #00406b;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.card-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.card-footer-meta {
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-role-label {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: #666666;
+}
+
+.card-role-label strong {
+  color: var(--color-heading);
+}
+
+.card-arrow {
+  font-size: 1.125rem;
+  color: var(--color-accent);
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.leadership-card:hover .card-arrow {
+  transform: translateX(4px);
+}
+
+/* ─── Physical Craft Projects Grid ─── */
+.craft-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.craft-card {
+  display: block;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.craft-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.craft-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--color-card-bg);
+  overflow: hidden;
+}
+
+.craft-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.craft-card:hover .craft-image-wrap img {
+  transform: scale(1.03);
+}
+
+.craft-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.craft-card:hover .craft-overlay {
+  opacity: 1;
+}
+
+.craft-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  letter-spacing: 0.04em;
+}
+
+.craft-category {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  margin-top: 0.35rem;
+}
+
+.craft-caption {
+  padding: 1.25rem 1.5rem;
+}
+
+.craft-caption h4 {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.craft-caption p {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.45;
+  margin: 0;
 }
 
 @media (max-width: 900px) {
@@ -772,27 +1170,317 @@ em {
   color: var(--color-heading);
 }
 
-/* ─── About Page ─── */
+/* ─── About Page (Executive Senior Design Manager Profile) ─── */
 .about-page-wrap {
-  max-width: var(--content-max-width);
+  max-width: 980px;
   margin: 0 auto;
 }
 
-.about-columns {
+.about-header {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-intro-grid {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 320px 1fr;
   gap: 3.5rem;
   align-items: start;
 }
 
-.about-photo {
-  width: 100%;
-  border-radius: 4px;
-  display: block;
+.about-photo-col {
+  display: flex;
+  flex-direction: column;
 }
 
-.about-text p {
+.about-photo {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about-photo-badge {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: #666666;
+  margin-top: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+  display: inline-block;
+}
+
+.about-bio-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.about-name {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-heading);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.about-title-role {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
   margin-bottom: 1.25rem;
+}
+
+.about-lead-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #222222;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.about-contact-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary-about {
+  display: inline-flex;
+  align-items: center;
+  background: #222222;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 10px 24px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.btn-primary-about:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn-secondary-about {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: #222222;
+  border: 1px solid #222222;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 10px 24px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.btn-secondary-about:hover {
+  background: #222222;
+  color: #ffffff;
+}
+
+/* ─── Leadership Philosophy Grid ─── */
+.leadership-section {
+  margin: 3.5rem 0 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center .section-subtext {
+  margin: 0 auto;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin: 2.5rem 0;
+}
+
+.philosophy-card {
+  background: #fbfbfb;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.philosophy-icon {
+  width: 44px;
+  height: 44px;
+  background: #eef5fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00406b;
+  margin-bottom: 0.5rem;
+}
+
+.philosophy-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.philosophy-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.philosophy-card p {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #555555;
+  margin: 0;
+}
+
+.philosophy-card.philosophy-card-wide {
+  grid-column: span 2;
+}
+
+/* ─── Leadership Competencies Matrix ─── */
+.competencies-section {
+  margin: 3.5rem 0;
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.competency-box {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.75rem 1.5rem;
+}
+
+.competency-box h4 {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-accent);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.competency-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.competency-box li {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: #444444;
+  padding: 8px 0;
+  border-bottom: 1px solid #f2f2f2;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.competency-box li:last-child {
+  border-bottom: none;
+}
+
+/* ─── About Closing CTA Section ─── */
+.about-cta-section {
+  margin: 3.5rem 0 2rem;
+}
+
+.roots-cta-card {
+  background: #f5f8fb;
+  border: 1px solid #dbe6ef;
+  border-radius: 8px;
+  padding: 2.75rem 2rem;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.roots-cta-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-heading);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.roots-cta-card p {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: #555555;
+  margin-bottom: 1.5rem;
+}
+
+.roots-cta-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* ─── Contact Page ─── */
@@ -997,14 +1685,43 @@ html.authenticated .password-gate-overlay,
     padding: 40px 24px;
   }
 
-  .about-columns {
+  .metrics-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .leadership-projects-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .about-photo {
+  .craft-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-photo-col {
     max-width: 320px;
     margin: 0 auto;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .philosophy-card.philosophy-card-wide {
+    grid-column: span 1;
+  }
+
+  .competencies-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .project-covers-grid {
@@ -1014,6 +1731,25 @@ html.authenticated .password-gate-overlay,
 }
 
 @media (max-width: 650px) {
+  .metrics-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-intro-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-actions-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .card-content {
+    padding: 1.25rem;
+  }
+
   .image-grid-2,
   .image-grid-3,
   .image-grid-4 {

@@ -2,40 +2,161 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About — Charlie Herbozo-Vidal" passwordProtected={false}>
+<BaseLayout title="About & Leadership Philosophy — Charlie Herbozo-Vidal" passwordProtected={false}>
   <div class="about-page-wrap">
-    <h1>About</h1>
+    <!-- Breadcrumb / Back Link -->
+    <a href="/" class="back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+      Back to Leadership Work
+    </a>
 
-    <div class="about-columns">
-      <div class="about-photo-wrap">
-        <img src="/images/headshot.jpg" alt="Charlie Herbozo-Vidal" class="about-photo" />
+    <!-- Executive Bio Section -->
+    <header class="about-header">
+      <div class="about-intro-grid">
+        <div class="about-photo-col">
+          <img src="/images/headshot.jpg" alt="Charlie Herbozo-Vidal" class="about-photo" />
+          <div class="about-photo-badge">
+            <span class="badge-dot"></span> Based in NYC • By way of Lima, Peru
+          </div>
+        </div>
+
+        <div class="about-bio-col">
+          <span class="about-eyebrow">Executive Profile</span>
+          <h1 class="about-name">Charlie Herbozo-Vidal</h1>
+          <p class="about-title-role">Senior Design Manager &amp; Product Strategist</p>
+
+          <p class="about-lead-text">
+            I lead multidisciplinary design teams working on large-scale digital products. With roots in industrial design and engineering, I turn complex, high-friction enterprise systems into intuitive products that actually drive revenue.
+          </p>
+
+          <p>
+            Over the past several years at CVS Health, I have led the design strategy for nationwide retail modernization, an 80M+ member loyalty ecosystem, and high-stakes healthcare software. My teams blend behavioral research, scalable design systems, and close engineering partnerships to unlock over $100M in operational savings and generate $25M+ in new annual margin.
+          </p>
+
+          <div class="about-contact-links">
+            <a href="mailto:charlie@charliehv.design" class="btn-primary-about">Connect by Email</a>
+            <a href="http://www.linkedin.com/in/charlie-herbozovidal" target="_blank" rel="noopener" class="btn-secondary-about">LinkedIn Profile &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Leadership Philosophy Section -->
+    <section class="leadership-section">
+      <div class="section-header-block text-center">
+        <span class="section-eyebrow">How I Lead</span>
+        <h2 class="section-heading">My Leadership &amp; Management Philosophy</h2>
+        <p class="section-subtext">
+          Good design leadership isn't about micromanaging layouts. It’s about building high-trust teams, giving designers room to grow, and proving the real business value of thoughtful UX.
+        </p>
       </div>
 
-      <div class="about-text">
-        <p>Hi, I'm Charlie!</p>
-        <p>
-          Whether I'm designing a digital ecosystem, engineering a solution, or baking a loaf of
-          sourdough, I am driven by a love for the process of creation.
-        </p>
-        <p>
-          Based in New York City by way of Lima, Peru, I am a hybrid Creative Lead, Engineer, and
-          Business Strategist. Instead of narrowing my focus to just one discipline, I've spent my
-          career mastering how they connect.
-        </p>
-        <p>
-          Over the past few years, I've focused on optimizing omnichannel user experiences across
-          retail pharmacy, convenience, and e-commerce sectors. My work includes shaping the
-          strategy for large-scale, nationwide design modernization efforts that successfully
-          aligned cross-functional teams and drove measurable business value.
-        </p>
-        <p>
-          My expertise lies in translating complex business goals into seamless, customer-centric
-          digital experiences. I approach every challenge with deep curiosity and a collaborative
-          mindset, and I'm always looking for innovative teams ready to elevate their user experience
-          and scale their impact.
-        </p>
-        <p>Let's connect!</p>
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Ownership Over Micromanagement</h3>
+          <p>
+            My job isn't to prescribe visual solutions. It’s to frame problems clearly, set a high quality bar, and clear organizational roadblocks. I coach designers on how to break down complex challenges and present their rationale with confidence, giving them real autonomy over the work.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Connecting Design to Business Impact</h3>
+          <p>
+            Design can't live in an aesthetic vacuum. I guide teams to link everyday design decisions directly to the numbers leadership tracks—like margin, task speed, and customer retention. When we talk about impact in terms of real business results, design earns a natural seat at the decision table.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>High Safety, High Craft Standards</h3>
+          <p>
+            Great teams need both honest feedback and psychological safety. I run critique sessions where we can openly challenge ideas without anyone taking it personally. It’s about testing work against real user needs and encouraging smart risks, while making sure everyone feels backed by the team.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>The Product Triad: Design, Tech, &amp; Business</h3>
+          <p>
+            Products succeed when product, engineering, and design work as true partners from day one. With my engineering background, I like to get under the hood—aligning design tokens with production code and running joint discovery sprints so what we design is feasible, maintainable, and built to last.
+          </p>
+        </div>
+
+        <div class="philosophy-card philosophy-card-wide">
+          <div class="philosophy-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3>AI Workflows &amp; Operational Leverage</h3>
+          <p>
+            I believe in removing operational friction so my team can focus purely on craft and storytelling. I actively adopt and build AI-assisted workflows—from automated localization pipelines to code-backed React prototypes—to eliminate busywork, increase our experimentation velocity, and bridge the gap between design and engineering.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Leadership Capabilities Matrix -->
+    <section class="competencies-section">
+      <div class="section-header-block">
+        <span class="section-eyebrow">Core Capabilities</span>
+        <h2 class="section-heading">Leadership &amp; Strategic Competencies</h2>
+      </div>
+
+      <div class="competencies-grid">
+        <div class="competency-box">
+          <h4>People &amp; Team Leadership</h4>
+          <ul>
+            <li>Mentoring designers &amp; career development</li>
+            <li>Design critique frameworks &amp; quality bars</li>
+            <li>Managing pod resourcing &amp; design sprints</li>
+            <li>Psychological safety &amp; team retention</li>
+            <li>Hiring, interviewing &amp; onboarding</li>
+          </ul>
+        </div>
+
+        <div class="competency-box">
+          <h4>Product &amp; Growth Strategy</h4>
+          <ul>
+            <li>Omnichannel customer journey mapping</li>
+            <li>Balancing business goals with user needs</li>
+            <li>Qualitative &amp; quantitative research synthesis</li>
+            <li>North Star vision &amp; executive alignment</li>
+            <li>Conversion funnels &amp; margin optimization</li>
+          </ul>
+        </div>
+
+        <div class="competency-box">
+          <h4>Systems &amp; Technical Depth</h4>
+          <ul>
+            <li>Design token architecture &amp; token pipelines</li>
+            <li>Advanced Figma variables, modes &amp; slots</li>
+            <li>Human-in-the-loop AI interfaces</li>
+            <li>Hardware &amp; software integration (Retail POS)</li>
+            <li>Design ops &amp; developer handoff workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Executive CTA -->
+    <section class="about-cta-section">
+      <div class="roots-cta-card">
+        <h3>Looking for a Senior Design Manager?</h3>
+        <p>I’m always open to discussing new leadership opportunities, team scaling, or complex product challenges. Let’s connect.</p>
+        <div class="roots-cta-actions">
+          <a href="mailto:charlie@charliehv.design" class="btn-primary-about">Get in Touch</a>
+          <a href="/" class="btn-secondary-about">Explore Featured Case Studies &rarr;</a>
+        </div>
+      </div>
+    </section>
   </div>
 </BaseLayout>

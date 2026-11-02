@@ -8,20 +8,22 @@ interface Props {
 
 const {
   title,
-  description = 'Portfolio of Charlie Herbozo-Vidal — Industrial Designer, User Experience Strategist, Creative Lead',
+  description = 'Portfolio of Charlie Herbozo-Vidal — Senior Design Manager & Product Strategist',
   passwordProtected = false,
   isSplash = false,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 
-const workProjects = [
-  { name: 'Loyalty and Strategy', href: '/projects/loyalty-and-strategy' },
+const featuredProjects = [
+  { name: 'Loyalty & Strategy', href: '/projects/loyalty-and-strategy' },
   { name: 'Point of Sale', href: '/projects/point-of-sale' },
-  { name: 'UX Research', href: '/projects/ux-research' },
+  { name: 'Specialty Pharmacy & AI', href: '/projects/specialty-pharmacy' },
+  { name: 'Design Systems', href: '/projects/design-systems' },
   { name: 'Creative Direction', href: '/projects/creative-direction' },
-  { name: 'Design Systems Engineering', href: '/projects/design-systems' },
-  { name: 'Specialty Pharmacy', href: '/projects/specialty-pharmacy' },
+];
+
+const craftProjects = [
   { name: 'Furniture Design', href: '/projects/furniture-design' },
   { name: 'Photography work', href: '/projects/photography' },
 ];
@@ -95,11 +97,26 @@ const workProjects = [
 
           <nav class="sidebar-nav">
             <a href="/" class={`nav-group-title ${currentPath === '/' ? 'active' : ''}`}>
-              Work
+              Leadership Work
             </a>
 
             <div class="nav-sublinks">
-              {workProjects.map((p) => (
+              {featuredProjects.map((p) => (
+                <a
+                  href={p.href}
+                  class={`nav-sublink ${currentPath === p.href ? 'active' : ''}`}
+                >
+                  {p.name}
+                </a>
+              ))}
+            </div>
+
+            <div class="nav-group-title nav-group-craft">
+              Industrial Design
+            </div>
+
+            <div class="nav-sublinks">
+              {craftProjects.map((p) => (
                 <a
                   href={p.href}
                   class={`nav-sublink ${currentPath === p.href ? 'active' : ''}`}

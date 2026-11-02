@@ -2,107 +2,132 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Point of Sale — Charlie Herbozo-Vidal" passwordProtected={true}>
+<BaseLayout title="Next-Gen Point of Sale Modernization — Charlie Herbozo-Vidal" passwordProtected={true}>
   <div class="case-study">
     <a href="/" class="back-link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
-      Back to Work
+      Back to Leadership Work
     </a>
 
-    <h1>Point of Sale</h1>
+    <h1>Next-Gen Point of Sale Modernization</h1>
+    <p class="project-subtitle" style="text-align: center; color: var(--color-muted); margin-bottom: 2rem;">Modernizing Checkout Across 9,000+ Retail Stores • 30-Month Multi-Phased Rollout</p>
 
+    <!-- Executive Scorecard -->
     <div class="project-meta-list">
-      <p><span class="meta-label">Role:</span> Lead UX Researcher, UX Designer, &amp; Product Strategist</p>
-      <p><span class="meta-label">Team:</span> Managed 3 UX Researchers; Cross-functional Product &amp; Engineering Pods</p>
-      <p><span class="meta-label">Timeline:</span> 2.5 Years</p>
-      <p><span class="meta-label">Impact:</span> SUS scores to "Grade A" 88 points across thousands of locations</p>
+      <p><span class="meta-label">Leadership Role:</span> Design Lead &amp; Research Manager</p>
+      <p><span class="meta-label">Team Led:</span> Managed 3 UX Researchers; Guided UX Strategy across Store Operations, Engineering &amp; Loyalty Pods</p>
+      <p><span class="meta-label">Cross-Functional Partners:</span> Product Directors, Store Operations, Retail Engineering, Loss Prevention</p>
+      <p><span class="meta-label">Timeline:</span> 2.5 Years (2022 – 2024)</p>
+      <p><span class="meta-label">Measured Impact:</span> Delivered <strong>$300M+ in operational savings</strong> across thousands of retail stores; raised platform usability to a <strong>"Grade A" 88 SUS score</strong>.</p>
     </div>
 
-    <p class="project-intro">CVS's legacy POS infrastructure was built on decade-old software architecture. It was highly rigid, plagued by glitches, and visually fragmented. Tasked with a complete ecosystem modernization, I was brought on to lead the end-to-end user experience strategy. The scope required orchestrating a multi-phased approach over 30 months: uncovering behavioral realities across thousands of stores, architecting intuitive UI paradigms, managing feature backlogs, and ensuring a seamless nationwide rollout.</p>
+    <p class="project-intro">CVS's legacy register software was built on decade-old architecture. It was clunky, glitchy, and visually disconnected between customer-facing touchscreens and cashier terminals. I led the UX and research strategy for a 30-month overhaul across our entire retail footprint. By observing how associates actually worked under peak-hour pressure and untangling legacy technical debt, my team modernized the platform, raised usability scores to 88 Grade A, and helped deliver over $300M in operational savings.</p>
 
-    <img src="/images/pos/live_01.png" alt="Point of Sale Overview" class="project-image" />
+    <img src="/images/pos/live_01.png" alt="Next-Gen Point of Sale Platform Overview" class="project-image" />
 
-      <h2>Phase 1: Discovery</h2>
-      <p>I led a dedicated team of three UX researchers to execute a massive triangulation of qualitative and quantitative data.</p>
-      <ul>
-        <li><strong>Quantitative Data Triangulation:</strong> Collaborated with data analytics teams to review millions of store transaction logs. We mapped out precise systemic drop-off points, high-frequency errors, and transaction-time bottlenecks.</li>
-        <li><strong>Contextual Inquiry & Ethnography:</strong> Directed my team in field research across diverse retail environments (high-volume urban locations vs. suburban stores). We shadowed associates live to observe workarounds, physical ergonomics, and environmental friction.</li>
-        <li><strong>Stakeholder Alignment:</strong> Conducted deep-dive workshops with engineering leads, product managers, and business strategists to map complex backend technical constraints and regulatory compliance guardrails.</li>
-      </ul>
+    <h2>Phase 1: Getting Out of the Building (Discovery &amp; Research)</h2>
+    <p>You cannot design checkout software from behind a desk. I led a team of three UX researchers to uncover what was really happening in our stores, combining hard transaction data with live store observations.</p>
 
-      <!-- Discovery Synthesis Diagrams -->
-      <img src="/images/pos/live_02.png" alt="Discovery data triangulation" class="project-image" loading="lazy" />
-      <img src="/images/pos/live_03.png" alt="User journey maps" class="project-image" loading="lazy" />
+    <ul>
+      <li><strong>Transaction Log Analysis:</strong> Partnered with our data analytics teams to review millions of store transactions, pinpointing exact screens where cashiers paused, encountered errors, or had to void items.</li>
+      <li><strong>In-Store Fieldwork &amp; Shadowing:</strong> Shadowed store associates during peak morning and evening rushes in both busy urban pharmacies and quiet suburban stores, documenting physical ergonomics, counter glare, and improvised workarounds.</li>
+      <li><strong>Surveys with 1,000+ Store Personnel:</strong> Deployed wide-net surveys to cashiers, shift supervisors, and store managers to surface friction points invisible in raw system logs.</li>
+      <li><strong>Technical &amp; Compliance Constraints:</strong> Facilitated deep-dive workshops with backend engineers and retail business leaders to understand mainframe constraints, offline failovers, and strict legal requirements.</li>
+    </ul>
 
-      <p>My team synthesized these findings into comprehensive user journey maps and an interactive service blueprint. We pinpointed that the primary friction wasn't user capability, but cognitive fatigue caused by a lack of visual hierarchy and unclear "next actions."</p>
-
-      <!-- Contextual Inquiry / Ethnographic Field Photos (4 images) -->
-      <div class="image-grid-4">
-        <img src="/images/pos/live_04.jpg" alt="Field research observation 1" loading="lazy" />
-        <img src="/images/pos/live_05.jpg" alt="Field research observation 2" loading="lazy" />
-        <img src="/images/pos/live_06.jpg" alt="Field research observation 3" loading="lazy" />
-        <img src="/images/pos/live_07.jpg" alt="Field research observation 4" loading="lazy" />
-      </div>
-
-      <h2>Phase 2: Ideation and Feature Prioritization</h2>
-      <p>Transitioning from research lead to principal strategist, I took ownership of the conceptual design phase and the product roadmap definition.</p>
-      <ul>
-        <li><strong>Brainstorming & Rapid Ideation:</strong> I facilitated cross-functional brainstorming sessions to generate ideas with Stakeholders and determine what they considered "Must haves" for the product.</li>
-        <li><strong>Concept Testing:</strong> I personally designed and ran iterative concept testing sessions with real store associates. We tested variable screen layouts, button densities, and navigation schemas to evaluate usability, sentiment, learnability and find bugs in the proposed design</li>
-        <li><strong>Feature Prioritization:</strong> With hundreds of potential features on the table, I collaborated with Product Management to establish a strict prioritization matrix. Balancing user impact against engineering complexity, I advocated for a phased roadmap that prioritized core transactional stability and high-value user flows over secondary capabilities.</li>
-      </ul>
-
-      <!-- Concept Testing & Associate Feedback -->
-      <img src="/images/pos/live_09.png" alt="Concept testing feedback: Guest Basket layout" class="project-image" loading="lazy" />
-      <img src="/images/pos/live_10.png" alt="Basic Transaction positive feedback and design opportunities" class="project-image" loading="lazy" />
-
-      <h2>Phase 3: UX Design Execution</h2>
-      <p>As the modernization structure solidified, the work split into specialized execution pods. I embedded myself directly into production, serving as the lead product designer executing end-to-end design frameworks for two critical workstreams: Store Management, and Loyalty and Personalization</p>
-
-      <!-- Colleague Core UI -->
-      <img src="/images/pos/live_08.png" alt="Colleague Landing Page interface and expectations" class="project-image" loading="lazy" />
-
-      <h3>Store Management</h3>
-      <p>The key here was re-working the structure of a complex menu into an intuitive structure, and simplifying management tasks that required multiple steps and devices to be completed.</p>
-
-      <!-- Store Management Shift Delegation Workflow -->
-      <img src="/images/pos/live_11.png" alt="Shift Delegation and Manager permissions workflow" class="project-image" loading="lazy" />
-
-      <h3>Loyalty and Personalization</h3>
-      <p>The goal for this pod was to simplify the enrollment flows that allow our customer base to grow and become loyal to CVS through the use of their loyalty programs, ExtraCare and ExtraCare Plus. Within this pod, the largest challenge was adapting to a set of API's that were architected for the legacy system.</p>
-
-      <!-- Loyalty Architecture: Logic, Flows & APIs -->
-      <div class="image-grid-2">
-        <img src="/images/pos/live_12.png" alt="POS & Loyalty: Logic and Flows" loading="lazy" />
-        <img src="/images/pos/live_13.png" alt="POS & Loyalty: API's and CRM Integration" loading="lazy" />
-      </div>
-
-      <p>The 2 main initiatives here were:</p>
-      <ul>
-        <li>Simplify the ExtraCare enrollment and make it customer facing</li>
-        <li>Facilitate the upgrade to ExtraCare Plus by adding it as an SKU to a transaction.</li>
-      </ul>
-
-      <!-- Initiative 1: Customer-Facing ExtraCare Enrollment -->
-      <div class="image-grid-2">
-        <img src="/images/pos/live_16.png" alt="Enrollment Process: Select Program (ExtraCare Free vs ExtraCare+)" loading="lazy" />
-        <img src="/images/pos/live_17.png" alt="Enrollment Process: Personal Details verification" loading="lazy" />
-      </div>
-
-      <!-- Initiative 2: ExtraCare Plus In-Lane Upgrade SKU -->
-      <div class="image-grid-2">
-        <img src="/images/pos/live_14.png" alt="In-lane ExtraCare Plus upgrade prompt" loading="lazy" />
-        <img src="/images/pos/live_15.png" alt="ExtraCare Plus checkout SKU and payment" loading="lazy" />
-      </div>
-
-      <h2>Phase 4: Usability and Metrics</h2>
-      <p>In the final phase, the focus pivoted back to rigorous validation to safeguard store operations prior to full nationwide deployment.</p>
-      <ul>
-        <li><strong>Usability Testing Leadership:</strong> I stepped back into a research leadership role, directing my team of three researchers through an exhaustive evaluative testing phase. We ran controlled, high-fidelity usability tests mimicking real-world store chaos (interruptions, high ambient noise, multi-tasking).</li>
-        <li><strong>Driving the Metrics:</strong> We utilized the System Usability Scale (SUS) as our north-star metric to measure success against legacy baselines. Through iterative design adjustments fueled by our evaluative data, we successfully drove the platform's usability scores up to a "Grade A" 88 points, past the baseline and outperforming general industry standards by over 10 points.</li>
-      </ul>
-
-      <!-- POS MOD SUS Usability Score Metrics -->
-      <img src="/images/uxr/live_08.png" alt="POS MOD SUS Usability Score (Grade A 88 Points)" class="project-image" loading="lazy" />
+    <!-- Field Observations & Survey Data Grid -->
+    <div class="image-grid-2">
+      <img src="/images/uxr/live_04.png" alt="In-store observations and survey data 1" loading="lazy" />
+      <img src="/images/uxr/live_05.png" alt="In-store observations and survey data 2" loading="lazy" />
     </div>
+
+    <!-- Discovery Synthesis Diagrams -->
+    <img src="/images/pos/live_02.png" alt="Discovery data triangulation" class="project-image" loading="lazy" />
+    <img src="/images/pos/live_03.png" alt="User journey maps and service blueprint" class="project-image" loading="lazy" />
+
+    <p>My team synthesized our findings into comprehensive journey maps and an interactive service blueprint. The biggest takeaway: associates weren't struggling because they lacked training—they were fatigued by cluttered screens and unclear next steps.</p>
+
+    <!-- Contextual Inquiry / Ethnographic Field Photos (4 images) -->
+    <div class="image-grid-4">
+      <img src="/images/pos/live_04.jpg" alt="Field research observation 1" loading="lazy" />
+      <img src="/images/pos/live_05.jpg" alt="Field research observation 2" loading="lazy" />
+      <img src="/images/pos/live_06.jpg" alt="Field research observation 3" loading="lazy" />
+      <img src="/images/pos/live_07.jpg" alt="Field research observation 4" loading="lazy" />
+    </div>
+
+    <!-- Blue Sky Vision -->
+    <img src="/images/uxr/live_06.png" alt="Blue Sky vision and stakeholder synthesis" class="project-image" loading="lazy" />
+    <p class="image-caption">Synthesizing stakeholder input into a unified North Star Blue Sky vision</p>
+
+    <h2>Phase 2: Ideation, Testing &amp; Roadmapping</h2>
+    <p>Moving from discovery into architecture, I took ownership of conceptual prototyping and feature prioritization.</p>
+    <ul>
+      <li><strong>Iterative Usability Cycles:</strong> Directed our research team through 5 testing cycles across 50+ real-world retail scenarios, using tree testing to organize navigation and card sorts to structure menus.</li>
+      <li><strong>Touchscreen Testing with Store Associates:</strong> Tested button densities, touch-target bounding boxes, and scan-to-tender flows with cashiers under simulated peak-hour cognitive load.</li>
+      <li><strong>Enforcing a Strict Prioritization Matrix:</strong> With hundreds of feature requests from business and operations, I worked with Product Directors to balance user impact against engineering complexity, keeping the MVP focused on transactional stability and checkout speed.</li>
+    </ul>
+
+    <!-- Concept Testing & Associate Feedback -->
+    <img src="/images/pos/live_09.png" alt="Concept testing feedback: Guest Basket layout" class="project-image" loading="lazy" />
+    <img src="/images/pos/live_10.png" alt="Basic Transaction positive feedback and design opportunities" class="project-image" loading="lazy" />
+    <img src="/images/uxr/live_07.png" alt="Navigation tree test and card sorting structure" class="project-image" loading="lazy" />
+
+    <h2>Phase 3: Execution Across Core Workstreams</h2>
+    <p>When engineering began, work split into dedicated cross-functional pods. I led product design across two critical workstreams: Store Management and Loyalty Integration.</p>
+
+    <!-- Colleague Core UI -->
+    <img src="/images/pos/live_08.png" alt="Colleague Landing Page interface and expectations" class="project-image" loading="lazy" />
+
+    <h3>Workstream 1: Store Management Workflows</h3>
+    <p>Legacy manager tools were buried inside multi-level menus and often required switching between physical devices. I redesigned this into a centralized management hub with role-based permissions, allowing shift supervisors to approve register overrides and complete end-of-day balances in seconds.</p>
+
+    <!-- Store Management Shift Delegation Workflow -->
+    <img src="/images/pos/live_11.png" alt="Shift Delegation and Manager permissions workflow" class="project-image" loading="lazy" />
+
+    <h3>Workstream 2: Loyalty &amp; Personalization Integration</h3>
+    <p>Making CVS’s ExtraCare program easy to use at checkout was vital for business growth. The technical challenge was adapting legacy APIs into instant, responsive UI states so the register never lagged while scanning items.</p>
+
+    <!-- Loyalty Architecture: Logic, Flows & APIs -->
+    <div class="image-grid-2">
+      <img src="/images/pos/live_12.png" alt="POS & Loyalty: Logic and Flows" loading="lazy" />
+      <img src="/images/pos/live_13.png" alt="POS & Loyalty: API's and CRM Integration" loading="lazy" />
+    </div>
+
+    <p>Key initiatives shipped within this pod:</p>
+    <ul>
+      <li><strong>Customer-Facing ExtraCare Enrollment:</strong> Replaced associate-entered registration with a clear, self-guided prompt directly on the payment pin-pad.</li>
+      <li><strong>In-Lane ExtraCare Plus Upgrade:</strong> Added a 1-tap paid subscription upgrade directly as a register SKU, eliminating the need to cancel transactions mid-flight.</li>
+    </ul>
+
+    <!-- Initiative 1: Customer-Facing ExtraCare Enrollment -->
+    <div class="image-grid-2">
+      <img src="/images/pos/live_16.png" alt="Enrollment Process: Select Program (ExtraCare Free vs ExtraCare+)" loading="lazy" />
+      <img src="/images/pos/live_17.png" alt="Enrollment Process: Personal Details verification" loading="lazy" />
+    </div>
+
+    <!-- Initiative 2: ExtraCare Plus In-Lane Upgrade SKU -->
+    <div class="image-grid-2">
+      <img src="/images/pos/live_14.png" alt="In-lane ExtraCare Plus upgrade prompt" loading="lazy" />
+      <img src="/images/pos/live_15.png" alt="ExtraCare Plus checkout SKU and payment" loading="lazy" />
+    </div>
+
+    <h2>Phase 4: Field Validation &amp; Nationwide Rollout</h2>
+    <p>Before deploying software across thousands of retail locations, our team ran evaluative testing that mimicked real store chaos: barcode scan failures, dropped network connections, customer questions, and store noise.</p>
+
+    <ul>
+      <li><strong>Realistic Usability Testing:</strong> Tested real cashiers of varying technical fluency, measuring time-to-first-transaction, error recovery speed, and physical comfort.</li>
+      <li><strong>Measuring Usability (SUS):</strong> We tracked the System Usability Scale (SUS) as our north star. Through data-driven design adjustments, we drove the platform’s usability score up to a <strong>"Grade A" 88 points</strong>, beating retail industry standards by over 10 points.</li>
+      <li><strong>Delivering $300M+ in Operational Savings:</strong> By shaving seconds off transaction times across millions of daily in-store purchases, reducing associate onboarding time, and eliminating supervisor override bottlenecks, the redesign unlocked over $300M in verified operational savings.</li>
+    </ul>
+
+    <!-- POS MOD SUS Usability Score Metrics -->
+    <img src="/images/uxr/live_08.png" alt="POS MOD SUS Usability Score (Grade A 88 Points)" class="project-image" loading="lazy" />
+
+    <h2>Leadership Retrospective</h2>
+    <ol>
+      <li><strong>Field Research De-Risks Expensive Engineering:</strong> Watching real associates in messy store environments caught dozens of edge cases early, saving our engineering teams from costly post-launch rewrites.</li>
+      <li><strong>Software Ergonomics Depend on Physical Context:</strong> At the counter, usability is directly tied to hardware angles, ambient lighting, and counter height. Good design leadership requires testing software in the physical world where it actually lives.</li>
+      <li><strong>Empower Researchers to Speak Directly to Product Leaders:</strong> When researchers present their own field insights directly to product and business directors, design transitions from an execution team into a core strategic partner.</li>
+    </ol>
+  </div>
 </BaseLayout>

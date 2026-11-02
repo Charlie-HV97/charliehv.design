@@ -2,124 +2,110 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Design Systems Engineering — Charlie Herbozo-Vidal" passwordProtected={true}>
+<BaseLayout title="Enterprise Design Systems Engineering — Charlie Herbozo-Vidal" passwordProtected={true}>
   <div class="case-study">
     <a href="/" class="back-link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
-      Back to Work
+      Back to Leadership Work
     </a>
 
-    <h1>Design Systems Engineering</h1>
-    <p class="project-subtitle" style="text-align: center; color: var(--color-muted); margin-bottom: 2rem;">Designing experiences that scale</p>
+    <h1>Enterprise Design Systems Engineering &amp; Governance</h1>
+    <p class="project-subtitle" style="text-align: center; color: var(--color-muted); margin-bottom: 2rem;">Multi-Platform Token Architecture, Component Modularity &amp; Cross-Team Parity</p>
 
-    <p class="project-intro">I approach design systems not just as a collection of visual components, but as a scalable product and a shared language between design and technology. Combining an engineering foundation with advanced UX frameworks, I specialize in architecting, scaling, and maintaining multi-platform design tokens and flexible component libraries. My goal is to reduce design debt, eliminate engineering silos, and streamline enterprise software utilization to drive measurable operational efficiency.</p>
-
-    <h2>Case Study: Multi-Platform System — Point of Sale</h2>
-      <p><em>Done in collaboration with Jason Chang, Emery Grearson, James Cradit & Teja Telikicherla.</em></p>
-
-      <h3>The Challenge</h3>
-      <p>Managing fragmented interfaces across entirely different user bases—internal corporate colleagues versus everyday consumers—leading to visual inconsistencies and redundant engineering work.</p>
-
-      <h3>The Strategy</h3>
-      <p>Co-architected and maintained a comprehensive design system and component library for Point of Sale (POS) infrastructure spanning two distinct platforms:</p>
-      <ul>
-        <li>Colleague-Facing System</li>
-        <li>Customer-Facing System</li>
-      </ul>
-
-      <h3>The Impact</h3>
-      <p>Created a unified foundational language that supported both platforms while allowing for unique, user-specific interaction patterns.</p>
-
-      <!-- Images 1 & 2 moved down from top section -->
-      <div class="image-grid-2">
-        <img src="/images/dse/live_01.png" alt="Multi-Platform Design System" />
-        <img src="/images/dse/live_02.png" alt="Scalable Design Tokens" />
-      </div>
-
-      <h2>Case Study: Flexible & Optimized Enterprise Components</h2>
-
-      <!-- Images 3 & 4 moved down from previous section -->
-      <img src="/images/dse/live_03.png" alt="Multi-platform POS component architecture" class="project-image" loading="lazy" />
-      <img src="/images/dse/live_04.png" alt="Customer and colleague interface parity" class="project-image" loading="lazy" />
-
-      <h3>The Challenge</h3>
-      <p>Enterprise software often suffers from performance lag or rigid UI layouts because components are hardcoded for specific use cases rather than built for modularity. The existing CVS design system was outdated and was architected for rigidity.</p>
-
-      <h3>The Strategy</h3>
-      <p>Designed and engineered highly flexible, customizable, and atomic UI components. By leveraging Figma's advanced features like variables, modes and slot components, I was able to optimize the number of components, while maintaining large levels of flexibility.</p>
-
-      <h3>The Impact</h3>
-      <p>Drastically accelerated time-to-market for new feature rollouts. Designers could seamlessly customize layouts within bounds, and developers could implement them using pre-approved, production-ready code blocks.</p>
-
-      <img src="/images/dse/live_05.png" alt="Atomic UI components" class="project-image" loading="lazy" />
-      <img src="/images/dse/live_06.png" alt="Slot and variable component architecture" class="project-image" loading="lazy" />
-
-      <p>By leveraging variables, modes and a new atomic model for tokenizing values, I led the charge to make our design system responsive and facilitate web development.</p>
-
-      <p>Collaborating with engineers, I was able to establish the appropriate breakpoints, understand their restrictions and their needs. This helped bridge the gap between a responsive Figma design, and a ready to implement piece of code.</p>
-
-      <!-- Breakpoint Token Pair -->
-      <div class="image-grid-2">
-        <img src="/images/dse/live_07.png" alt="Breakpoint token model 1" loading="lazy" />
-        <img src="/images/dse/live_08.png" alt="Breakpoint token model 2" loading="lazy" />
-      </div>
-
-      <p>Through trial and error, I was able to architect a system that allowed designers enough flexibility to be creative, without straying away from a system or creating development issues.</p>
-      <p>By making use of Slots, I was able to create a component that was flexible and customizable, while still within the tokenized system.</p>
-
-      <img src="/images/dse/live_09.png" alt="Slots and modular component design" class="project-image" loading="lazy" />
-
-      <p>By leveraging variables and modes, I created a single component that designers could transform with a single click into all 3 breakpoints. This cut our "development support" design time in half, allowing designers to focus on improving experiences and brainstorming, and not pushing pixels to 3 breakpoints.</p>
-
-      <!-- Variable Modes Switching Pair -->
-      <div class="image-grid-2">
-        <img src="/images/dse/live_10.png" alt="Single-click 3 breakpoint transformation 1" loading="lazy" />
-        <img src="/images/dse/live_11.png" alt="Single-click 3 breakpoint transformation 2" loading="lazy" />
-      </div>
-
-      <p>Similarly, the app components suffered from outdated architecture that were not being maintained and were optimized for past versions of the app. This led to each product team implementing ad-hoc components that looked and felt different. As part of the larger FS team, I helped standardize the visual style and simplify the "base templates" for the home and child pages, creating blank slates that could be further customized to support a vast array of use cases.</p>
-
-      <h2>Documentation and Collaboration at the Heart of Design Systems</h2>
-
-      <h3>The Challenge</h3>
-      <p>The classic friction point where flexible and intentional design fails to translate into "feasible code," causing project delays and layout breaks.</p>
-
-      <h3>The Strategy</h3>
-      <p>Acted as the technical bridge and "central node" between design and development squads. I established rigorous hand-off documentation, ran weekly cross-functional system reviews, and paired directly with front-end engineers to audit code feasibility, test responsiveness, and ensure proper token implementation.</p>
-
-      <h3>The Impact</h3>
-      <p>Eliminated guesswork at the engineering hand-off phase. Built a team-first culture where developers were active participants in the design system lifecycle, ensuring 100% design fidelity upon product shipment.</p>
-
-      <!-- Image 12 moved down from previous section -->
-      <img src="/images/dse/live_12.png" alt="Base template standardization" class="project-image" loading="lazy" />
-
-      <img src="/images/dse/live_13.png" alt="Hand-off documentation and developer mode" class="project-image" loading="lazy" />
-
-      <!-- Image 14 moved up from next section -->
-      <img src="/images/dse/live_14.png" alt="Loyalty Design System atomic components" class="project-image" loading="lazy" />
-
-      <p>By making use of Figma's native features, such as annotations and dev mode, as well as leveraging a close relationship with engineers, I was able to ensure the elements in the system were built with the flexibility required to:</p>
-      <ul>
-        <li>Scale a new program to new categories and markets</li>
-        <li>Personalize the content as directed by the growth strategy</li>
-        <li>Facilitate ease of development in future releases</li>
-        <li>Reduce development effort by having a single "main" reusable component</li>
-        <li>Standardize views in our app and .com experiences.</li>
-      </ul>
-
-      <h2>Standardization & Growth: A Loyalty Design System</h2>
-
-      <h3>The Challenge</h3>
-      <p>As the Loyalty and Consumer Growth workstream lead, I inherited a fragmented digital ecosystem where legacy loyalty features were built on ad-hoc, rigid components that restricted rapid testing and optimization.</p>
-
-      <h3>The Strategy</h3>
-      <p>Directed the standardization of the enterprise Loyalty Design System. I audited, refactored, and unified atomic components across the entire loyalty enrollment and utilization experience.</p>
-
-      <h3>The Impact</h3>
-      <p>Empowered cross-functional teams to rapidly deploy A/B tests and scale growth features instantly, ensuring that every touchpoint remained visually cohesive and aligned with core brand guidelines.</p>
-
-      <div class="project-note">
-        <p>Project is not yet live. Ask for a walkthrough.</p>
-      </div>
+    <!-- Executive Scorecard -->
+    <div class="project-meta-list">
+      <p><span class="meta-label">Leadership Role:</span> Design Systems Lead &amp; System Architect</p>
+      <p><span class="meta-label">Core Team:</span> Co-architected with Jason Chang, Emery Grearson, James Cradit &amp; Teja Telikicherla</p>
+      <p><span class="meta-label">Platform Scope:</span> Enterprise Point of Sale (Associate Terminals &amp; Customer Screens), Responsive Web, and Mobile App</p>
+      <p><span class="meta-label">Measured Impact:</span> Cut production design hand-off time by <strong>50%</strong>; eliminated visual drift between colleague and consumer touchpoints; established pre-approved, code-backed component pipelines across squads.</p>
     </div>
+
+    <p class="project-intro">A design system isn't just a collection of Figma components—it's a living product and a contract between design and engineering. Drawing on my engineering background, I specialize in architecting design tokens, modular component systems, and clear hand-off governance. My priority is reducing design debt, breaking down technical silos, and speeding up delivery across enterprise software squads.</p>
+
+    <h2>Initiative 1: The Multi-Platform POS System</h2>
+    <p><em>Done in close collaboration with Jason Chang, Emery Grearson, James Cradit &amp; Teja Telikicherla.</em></p>
+
+    <h3>The Challenge</h3>
+    <p>Our Point of Sale infrastructure served two fundamentally different user groups: store colleagues operating complex enterprise management screens, and everyday retail shoppers interacting with customer-facing touchscreens. Over time, each platform had developed its own ad-hoc components, leading to visual inconsistencies, duplicated engineering effort, and maintenance nightmares.</p>
+
+    <h3>The Architecture</h3>
+    <p>We co-architected a unified design system that supported both environments from a shared token foundation:</p>
+    <ul>
+      <li><strong>Shared Tokens, Specialized Patterns:</strong> Colors, typography scales, touch-target minimums, and spacing values were tokenized across both platforms, while allowing specific interaction schemas (high-density tables for associates vs. large high-contrast buttons for shoppers).</li>
+      <li><strong>Reduced Redundant Code:</strong> By sharing underlying components, engineering could build and maintain core logic once rather than writing separate UI libraries for each hardware screen.</li>
+    </ul>
+
+    <!-- Images 1 & 2 -->
+    <div class="image-grid-2">
+      <img src="/images/dse/live_01.png" alt="Multi-Platform Design System Overview" />
+      <img src="/images/dse/live_02.png" alt="Scalable Design Tokens Architecture" />
+    </div>
+
+    <h2>Initiative 2: Atomic Modularity &amp; 1-Click Responsive Transformations</h2>
+
+    <!-- Images 3 & 4 -->
+    <img src="/images/dse/live_03.png" alt="Multi-platform POS component architecture" class="project-image" loading="lazy" />
+    <img src="/images/dse/live_04.png" alt="Customer and colleague interface parity" class="project-image" loading="lazy" />
+
+    <h3>The Problem with Rigid Enterprise Components</h3>
+    <p>Legacy components at CVS were often hardcoded for single use cases. When a designer needed to adapt a card or modal for a slightly different workflow, they were forced to detach the component or draw a custom one from scratch. Over a few quarters, this led to massive component sprawl and inconsistent production builds.</p>
+
+    <h3>The Slot &amp; Variable Model</h3>
+    <p>I led the rebuild of our atomic components by taking full advantage of modern Figma capabilities, specifically <strong>Variables, Modes, and Slot components</strong>:</p>
+    <ul>
+      <li><strong>Slot Components for Flexibility:</strong> By defining protected component shells with flexible "slots," designers could customize interior content for their specific needs without breaking the underlying padding, border radii, or token rules.</li>
+      <li><strong>1-Click Breakpoint Transformations:</strong> Working with our front-end engineers, we established standardized responsive breakpoints. By tying these to Figma modes, I built components that designers could switch between mobile, tablet, and desktop views with a single click.</li>
+    </ul>
+
+    <p><strong>The Real-World Result:</strong> This single workflow enhancement cut the "production support" phase of design sprints in half. Designers could spend their time testing flows with real users instead of manually redrawing the same layout across three artboards.</p>
+
+    <img src="/images/dse/live_05.png" alt="Atomic UI components architecture" class="project-image" loading="lazy" />
+    <img src="/images/dse/live_06.png" alt="Slot and variable component structure" class="project-image" loading="lazy" />
+
+    <!-- Breakpoint Token Pair -->
+    <div class="image-grid-2">
+      <img src="/images/dse/live_07.png" alt="Breakpoint token model 1" loading="lazy" />
+      <img src="/images/dse/live_08.png" alt="Breakpoint token model 2" loading="lazy" />
+    </div>
+
+    <img src="/images/dse/live_09.png" alt="Slots and modular component design" class="project-image" loading="lazy" />
+
+    <!-- Variable Modes Switching Pair -->
+    <div class="image-grid-2">
+      <img src="/images/dse/live_10.png" alt="Single-click 3 breakpoint transformation: Mobile state" loading="lazy" />
+      <img src="/images/dse/live_11.png" alt="Single-click 3 breakpoint transformation: Desktop state" loading="lazy" />
+    </div>
+
+    <h2>Initiative 3: Bridge the Hand-off Gap &amp; System Governance</h2>
+
+    <h3>The Challenge</h3>
+    <p>A classic failure mode for enterprise design systems is that beautiful Figma libraries fail to match the real code shipped in production. Without strict governance and active communication, developers make assumptions and design fidelity drifts.</p>
+
+    <h3>The Governance Strategy</h3>
+    <p>I acted as the primary bridge between our design squads and engineering pods. We set up an operating rhythm designed to prevent surprises at the sprint finish line:</p>
+    <ul>
+      <li><strong>Weekly System Reviews:</strong> Ran recurring open office hours where product designers could bring proposed new patterns to evaluate whether they belonged in the core library or should remain local.</li>
+      <li><strong>Figma Dev Mode Annotations:</strong> Standardized documentation standards directly inside Figma, explicitly detailing responsive behavior, edge cases, error states, and token names.</li>
+      <li><strong>Code Auditing:</strong> Regularly paired with front-end developers to review live staging builds, verifying that tokens were implemented correctly in CSS and React.</li>
+    </ul>
+
+    <!-- Image 12 & 13 -->
+    <img src="/images/dse/live_12.png" alt="Base template standardization across views" class="project-image" loading="lazy" />
+    <img src="/images/dse/live_13.png" alt="Hand-off documentation and developer mode annotations" class="project-image" loading="lazy" />
+
+    <h2>Initiative 4: The Loyalty Design System</h2>
+    <p>As design lead for the Loyalty and Consumer Growth stream, I inherited legacy features built on disconnected components that made rapid A/B testing almost impossible. Every time our team wanted to experiment with a new reward prompt, it required weeks of custom design and development work.</p>
+
+    <p>I directed the creation of an enterprise Loyalty Design System, unifying every atomic element across enrollment and reward redemption. This library gave our growth pods pre-approved building blocks that allowed them to ship and iterate experiments in days rather than sprints.</p>
+
+    <!-- Image 14 -->
+    <img src="/images/dse/live_14.png" alt="Loyalty Design System atomic components" class="project-image" loading="lazy" />
+
+    <h2>Leadership Retrospective</h2>
+    <ol>
+      <li><strong>Adoption is the Only True Metric:</strong> A design system with 500 perfect components is useless if product teams refuse to use it. Success comes from listening to product designers' real pain points and giving them components that actually save them time.</li>
+      <li><strong>Engineering Must Co-Own the System:</strong> If developers view the design system as something "handed down from design," they won't defend it in code reviews. Involving engineers early in token naming and breakpoint definitions is non-negotiable.</li>
+      <li><strong>Modularity Beats Rigidity:</strong> Hardcoded components always break down when edge cases arise. Building slot-based architectures provides the guardrails needed for brand consistency without crippling a designer's ability to solve unique user problems.</li>
+    </ol>
+  </div>
 </BaseLayout>
