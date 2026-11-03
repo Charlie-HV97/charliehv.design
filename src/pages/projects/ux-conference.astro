@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="UX@CVS 2026: Enterprise Access & Real-Time Analytics | Charlie Herbozo-Vidal"
+  description="How an AI-paired engineering effort removed registration barriers across CVS, Aetna, and Caremark, replacing an organizational blind spot with a real-time analytics operation."
+  image="/images/ux-conference/2_live_analytics_dashboard_showi.png"
+  passwordProtected={true}
+>
+  <div class="case-study">
+    <a href="/" class="back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+      Back to Leadership Work
+    </a>
+
+    <h1>Opening a Company-Wide Conference to Every Business Unit: Measuring What Actually Worked</h1>
+    <p class="project-subtitle" style="text-align: center; color: var(--color-muted); margin-bottom: 2rem;">
+      How an AI-paired engineering effort removed registration barriers across 3 business units and replaced an organizational blind spot with real-time analytics &bull; UX@CVS 2026
+    </p>
+
+    <!-- Executive Scorecard -->
+    <div class="project-meta-list">
+      <p><span class="meta-label">Role:</span> Owner &amp; Builder, UX@CVS Feedback &amp; Analytics Initiative</p>
+      <p><span class="meta-label">Committee:</span> UX@CVS Planning Committee (October 2026)</p>
+      <p><span class="meta-label">Organizational Footprint:</span> Enterprise-Wide across CVS, Aetna, Caremark, Signify Health &amp; Oak Street Health</p>
+      <p><span class="meta-label">Executive Visibility:</span> Keynote opened by EVP of Experience &amp; Technology</p>
+      <p><span class="meta-label">Key Outcomes:</span> <strong>Conference NPS 67</strong> &bull; <strong>4.42 / 5</strong> ease-of-joining rating &bull; <strong>493 unique attendees</strong> across <strong>2,936 session instances</strong> &bull; <strong>21 conference sessions</strong> synthesized</p>
+    </div>
+
+    <p class="project-intro">
+      UX@CVS is CVS Health's company-wide UX conference, bringing together designers, researchers, and content strategists across three distinct business suites: CVS, Aetna, and Caremark. While the event always featured great content, two structural problems quietly limited it for years: people outside the "home" business unit struggled through login gates, and the committee had zero structured data on whether sessions were actually landing. Instead of waiting for an assigned ticket, I stepped up on the planning committee to build a zero-login feedback web app and a real-time analytics dashboard that gave our leadership honest numbers on what worked.
+    </p>
+
+    <!-- Hero Analytics Dashboard View -->
+    <figure class="case-study-figure">
+      <img src="/images/ux-conference/2_live_analytics_dashboard_showi.png" alt="Live UX@CVS 2026 Analytics Dashboard displaying NPS, satisfaction ratings, and real attendance metrics" class="project-image" loading="lazy" />
+      <figcaption class="image-caption">The live committee dashboard: tracking real-time NPS (67), session ratings, and verified cross-business-unit participation.</figcaption>
+    </figure>
+
+    <h2>1. The Problem: Fragmented Access &amp; A Measurement Blind Spot</h2>
+    <p>
+      CVS Health spans three distinct business divisions: CVS Retail, Aetna, and Caremark. Each runs on its own accounts, access levels, and IT boundaries, which created two quiet but significant hurdles:
+    </p>
+    <ul>
+      <li><strong>Access was fragmented:</strong> Past conferences ran in a heavy "webinar mode" requiring separate registrations for every single session. If you were on an Aetna or Caremark laptop, getting through the login gates was frustrating, and registration consistently ranked as the #1 friction point in previous attendee surveys.</li>
+      <li><strong>There was no measurement:</strong> We had no structured way to capture session or conference feedback. Satisfaction, NPS, and engagement were purely anecdotal. The only attendance data came from raw Microsoft Teams logs, which overstated real session lengths by anywhere from 1.1x to 8.6x because people left calls open in the background.</li>
+    </ul>
+
+    <h2>2. My Role: Taking It on End to End</h2>
+    <p>
+      This wasn’t an assigned ticket. It was an obvious gap I saw on the planning committee and took on from problem framing to live operations:
+    </p>
+    <ul>
+      <li><strong>Ruthless scoping:</strong> I made the call to prioritize the access and measurement problem over a "nice-to-have" calendar/RSVP feature. What moved the needle wasn't polished superficial features, but answering: <em>Can people get in, and did this conference actually work?</em></li>
+      <li><strong>AI-paired solo engineering:</strong> Working with Claude Code, I designed and built the entire system personally on CVS Health’s internal Cloud Application Platform (CAP), including the database, CI/CD pipeline, and live Slack integration. This enabled me to ship solo at a pace that typically requires a dedicated team.</li>
+      <li><strong>Live conference operations:</strong> During the three days of the conference, I ran live ops, caught and patched a webhook-formatting bug on day one via log analysis (not guesswork), and iterated on dashboard features in real time based on committee requests.</li>
+    </ul>
+
+    <h2>3. The Architecture: Zero Login, Open Surveys, and Live Dashboards</h2>
+    <p>
+      To make sure anyone could participate regardless of their hardware or business unit, I built the app around one core rule: <strong>zero login required</strong>.
+    </p>
+
+    <div class="image-grid-2">
+      <figure>
+        <img src="/images/ux-conference/1_the_open_feedback_survey___no.png" alt="Open feedback survey interface requiring no sign-in" loading="lazy" />
+        <figcaption class="image-caption">Zero-login survey: public link with anonymous HMAC token hashing.</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/ux-conference/feedback-qr.png" alt="In-session feedback QR code distributed on live slides" style="max-width: 240px; margin: 0 auto; display: block;" loading="lazy" />
+        <figcaption class="image-caption">In-session capture: scannable QR codes displayed on closing presenter slides.</figcaption>
+      </figure>
+    </div>
+
+    <ul>
+      <li><strong>No passwords or accounts:</strong> The feedback form was a public link. To protect privacy while preventing duplicate responses, we captured email once and hashed it into an anonymous token. No plain-text emails were ever stored in the database.</li>
+      <li><strong>One dynamic survey for the entire event:</strong> Instead of managing 20 different forms, a single survey handled every session. We added an automated URL lock for the closing keynote so a company-wide email could go out without attendees picking the wrong session from a dropdown.</li>
+      <li><strong>Live leadership dashboard:</strong> A password-gated analytics dashboard provided the committee with live NPS gauges, session scores, and org breakdowns as responses rolled in.</li>
+    </ul>
+
+    <h2>4. Turning Unstructured Data into Committee Insights</h2>
+    <p>
+      Numbers only tell part of the story. To understand what attendees were actually talking about across 21 sessions, I built an automated workflow to synthesize the Microsoft Copilot meeting transcripts:
+    </p>
+
+    <div class="image-grid-2">
+      <figure>
+        <img src="/images/ux-conference/3_conference_theme_word_cloud_ge.png" alt="Conference theme word cloud generated from Copilot session synthesis" loading="lazy" />
+        <figcaption class="image-caption">Theme cloud: common topics extracted across all 21 sessions.</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/ux-conference/4_themes_grouped_by_category_bar.png" alt="Themes grouped by category bar chart" loading="lazy" />
+        <figcaption class="image-caption">Category breakdown: what designers discussed most (design systems, AI tooling, and career paths).</figcaption>
+      </figure>
+    </div>
+
+    <h3>The 8.6x Teams Data Catch</h3>
+    <p>
+      When we compared Copilot engagement recaps against raw Microsoft Teams logs, something stood out. Nearly every session's Teams call ran well past its scheduled end (one by as much as 8.6x) because people left calls open in the background. A naive calculation would have severely distorted attendance. By filtering out phantom overrun time, we reported average real attendance presence at 72.8% of scheduled time, giving leadership honest, credible metrics instead of vanity numbers.
+    </p>
+
+    <h2>The Results: Proof Across Every Division</h2>
+    <p>
+      The clearest proof that removing access barriers worked? We received structured, measurable feedback from every single business unit, not just the core team running the event:
+    </p>
+
+    <div class="project-meta-list" style="margin: 2rem 0;">
+      <p><span class="meta-label">Conference NPS:</span> <strong>67</strong> (a strong score for an internal company conference).</p>
+      <p><span class="meta-label">Ease of Access:</span> <strong>4.42 / 5.0</strong> for "Joining sessions was easy" (the exact friction point this project targeted).</p>
+      <p><span class="meta-label">Attendance Scale:</span> <strong>493 unique attendees</strong> measured across <strong>2,936 attendee sessions</strong>.</p>
+      <p><span class="meta-label">Cross-Company Reach:</span> Verified responses across all 5 divisions: <strong>CVS (58)</strong>, <strong>Aetna (36)</strong>, <strong>Caremark (19)</strong>, <strong>Signify Health (14)</strong>, and <strong>Oak Street Health (2)</strong>.</p>
+      <p><span class="meta-label">Session Satisfaction:</span> <strong>4.57 / 5.0</strong>; <strong>4.58 / 5.0</strong> speaker engagement rating.</p>
+    </div>
+
+    <h2>Leadership Retrospective: Why This Matters Beyond the Conference</h2>
+    <p>
+      UX@CVS was opened this year by the EVP of Experience &amp; Technology. Being trusted to design, build, and operate the infrastructure an event at this level ran on represents four key leadership principles:
+    </p>
+    <ol>
+      <li><strong>Volunteering over waiting:</strong> Spotting the access and measurement void and volunteering to solve it instead of waiting for an assigned ticket is what distinguishes a contributor from a committee leader.</li>
+      <li><strong>Plumbing is community:</strong> It’s easy to talk about cross-company collaboration, but if designers from sister business units can’t even join a meeting without IT headaches, community remains theoretical. True leadership fixes the operational plumbing that keeps teams apart.</li>
+      <li><strong>Honest data over vanity metrics:</strong> Catching the 8.6x Teams overrun and taking the time to report genuine attendance presence built real credibility with executive stakeholders.</li>
+      <li><strong>Lead by building:</strong> Design leaders shouldn't just facilitate meetings; being able to roll up your sleeves, leverage AI developer tooling, and ship working production software creates new organizational capabilities that didn't exist before.</li>
+    </ol>
+  </div>
+</BaseLayout>

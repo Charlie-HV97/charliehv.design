@@ -15,15 +15,15 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
-    slug: 'loyalty-and-strategy',
-    title: 'Omnichannel Loyalty & Strategy',
-    subtitle: 'CVS ExtraCare & ExtraCare Plus (80M+ Members)',
-    category: 'Omnichannel Product Strategy & Growth',
-    role: 'Lead Product Designer & Growth Strategist',
-    impactMetric: '$60M Incremental Margin | 80M+ Active Members',
+    slug: 'ai-prototyping',
+    title: 'AI-Led Prototyping Systems & Async Review',
+    subtitle: 'Multi-Brand Capability, Automated Heuristics & Live Showcase Hubs',
+    category: 'DesignOps, AI Tooling & Systems Architecture',
+    role: 'Lead Design Technologist & AI Strategy Lead',
+    impactMetric: 'Quarters to Days | 2 Live Showcase Hubs',
     description:
-      'Led the end-to-end design strategy for CVS’s flagship loyalty program across 80M+ active members, architecting frictionless in-lane enrollment and in-app gamification that generated $60M in incremental margin.',
-    coverImage: '/images/covers/live_01.png',
+      'Architected a repeatable AI-led prototyping engine across two distinct brand systems (Retail & Health100), replacing slow synchronous walkthroughs with always-on showcase hubs, automated heuristic QA, and in-context review.',
+    coverImage: '/images/ai-prototyping/fs-app-hub-home.png',
   },
   {
     slug: 'point-of-sale',
@@ -35,6 +35,17 @@ export const featuredProjects: Project[] = [
     description:
       'Directed research and product design for a multi-phased modernization of CVS’s legacy POS across thousands of retail stores, unlocking $300M+ in operational savings and elevating platform usability to 88 Grade A.',
     coverImage: '/images/covers/live_02.png',
+  },
+  {
+    slug: 'loyalty-and-strategy',
+    title: 'Omnichannel Loyalty & Strategy',
+    subtitle: 'CVS ExtraCare & ExtraCare Plus (80M+ Members)',
+    category: 'Omnichannel Product Strategy & Growth',
+    role: 'Lead Product Designer & Growth Strategist',
+    impactMetric: '$60M Incremental Margin | 80M+ Active Members',
+    description:
+      'Led the end-to-end design strategy for CVS’s flagship loyalty program across 80M+ active members, architecting frictionless in-lane enrollment and in-app gamification that generated $60M in incremental margin.',
+    coverImage: '/images/covers/live_01.png',
   },
   {
     slug: 'specialty-pharmacy',
@@ -57,6 +68,17 @@ export const featuredProjects: Project[] = [
     description:
       'Architected and governed scalable design tokens and slot-based component libraries across customer-facing and colleague-facing platforms, bridging design and engineering to accelerate feature delivery.',
     coverImage: '/images/covers/live_05.png',
+  },
+  {
+    slug: 'ux-conference',
+    title: 'UX@CVS 2026: Enterprise Community & Analytics',
+    subtitle: 'Unifying 3 Business Units & Real-Time Measurement',
+    category: 'Enterprise Design Operations & Culture',
+    role: 'Planning Committee Member & Analytics Platform Lead',
+    impactMetric: 'NPS 67 | 493 Attendees Across 5 Business Units',
+    description:
+      'Eliminated IT access barriers across CVS, Aetna, and Caremark to open our company-wide UX conference, replacing an organizational blind spot with a zero-dependency web app and real-time analytics dashboard.',
+    coverImage: '/images/ux-conference/2_live_analytics_dashboard_showi.png',
   },
   {
     slug: 'creative-direction',
