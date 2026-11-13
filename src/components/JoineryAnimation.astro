@@ -1,0 +1,184 @@
+---
+// Standalone Wood Joinery to Polished UX vector animation component
+// Preserved for case studies, about page, or future showcase sections
+---
+
+<div class="joinery-ux-stage">
+  <svg viewBox="0 0 340 320" class="stage-svg" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <!-- Technical Blueprint Grid -->
+      <pattern id="cadGridComponent" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.75" />
+      </pattern>
+
+      <!-- Morph Clip Path following scanner -->
+      <clipPath id="morphClipComponent">
+        <rect class="scan-clip-rect" x="0" y="0" width="170" height="320" />
+      </clipPath>
+
+      <!-- Scan Beam Gradient -->
+      <linearGradient id="scanBeamComponent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+        <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.3" />
+        <stop offset="100%" stop-color="#38bdf8" stop-opacity="1" />
+      </linearGradient>
+    </defs>
+
+    <!-- Background Grid -->
+    <rect width="340" height="320" fill="#0f172a" />
+    <rect width="340" height="320" fill="url(#cadGridComponent)" />
+
+    <!-- LAYER 1: PHYSICAL WOOD JOINERY (Tactile CAD Blueprint) -->
+    <g class="layer-joinery">
+      <g class="wood-assembly" transform="translate(45, 40)">
+        <!-- Base Timber (Mortise) -->
+        <path d="M 30,130 L 130,70 L 220,120 L 120,180 Z" fill="#1e293b" stroke="#64748b" stroke-width="1.5" />
+        <path d="M 30,130 L 30,170 L 120,220 L 120,180 Z" fill="#0f172a" stroke="#64748b" stroke-width="1.5" />
+        <path d="M 120,220 L 220,160 L 220,120 L 120,180 Z" fill="#1e293b" stroke="#64748b" stroke-width="1.5" />
+
+        <!-- Mortise Pocket cutout -->
+        <path d="M 95,115 L 145,85 L 175,102 L 125,132 Z" fill="#090d16" stroke="#f59e0b" stroke-width="1" stroke-dasharray="2 2" />
+
+        <!-- Interlocking Tenon Timber -->
+        <path d="M 125,25 L 175,0 L 205,17 L 155,42 Z" fill="#2d3748" stroke="#cbd5e1" stroke-width="1.5" />
+        <path d="M 125,25 L 125,125 L 155,142 L 155,42 Z" fill="#1e293b" stroke="#cbd5e1" stroke-width="1.5" />
+        <path d="M 155,142 L 205,117 L 205,17 L 155,42 Z" fill="#334155" stroke="#cbd5e1" stroke-width="1.5" />
+
+        <!-- Grain Lines & Chamfer vectors -->
+        <path d="M 132,35 L 132,120" stroke="#475569" stroke-width="0.8" />
+        <path d="M 142,39 L 142,130" stroke="#475569" stroke-width="0.8" />
+        <path d="M 165,35 L 195,20" stroke="#475569" stroke-width="0.8" />
+
+        <!-- Engineering Dimension Marks -->
+        <line x1="15" y1="130" x2="15" y2="170" stroke="#f59e0b" stroke-width="1" />
+        <path d="M 12,130 L 18,130 M 12,170 L 18,170" stroke="#f59e0b" stroke-width="1" />
+        <text x="6" y="153" fill="#f59e0b" font-size="8" font-family="monospace">12mm</text>
+
+        <circle cx="120" cy="180" r="14" fill="none" stroke="rgba(245,158,11,0.5)" stroke-width="0.75" stroke-dasharray="2 2" />
+        <text x="135" y="195" fill="#f59e0b" font-size="7" font-family="monospace">R:8mm &bull; 90&deg;</text>
+      </g>
+
+      <!-- Blueprint Status Tag -->
+      <rect x="20" y="275" width="125" height="24" rx="4" fill="rgba(15,23,42,0.85)" stroke="#334155" />
+      <text x="28" y="290" fill="#94a3b8" font-size="9" font-family="monospace">PHYSICAL JOINERY</text>
+    </g>
+
+    <!-- LAYER 2: POLISHED UX ARCHITECTURE (Clipped by scanner) -->
+    <g class="layer-digital-ux" clip-path="url(#morphClipComponent)">
+      <rect width="340" height="320" fill="#090d16" />
+      <rect width="340" height="320" fill="url(#cadGridComponent)" />
+
+      <!-- Digital Auto-Layout Card Component -->
+      <g class="digital-component" transform="translate(30, 45)">
+        <rect x="0" y="0" width="280" height="215" rx="8" fill="#111827" stroke="#3b82f6" stroke-width="1.5" />
+
+        <rect x="-4" y="-4" width="8" height="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
+        <rect x="276" y="-4" width="8" height="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
+        <rect x="-4" y="211" width="8" height="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
+        <rect x="276" y="211" width="8" height="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
+
+        <!-- Component Header & Token Pill -->
+        <g transform="translate(16, 16)">
+          <text x="0" y="10" fill="#60a5fa" font-size="9" font-weight="600" font-family="monospace">&#9670; SystemCard / Primary</text>
+          <rect x="155" y="-2" width="92" height="18" rx="9" fill="#1e293b" stroke="#3b82f6" stroke-width="0.8" />
+          <text x="162" y="10" fill="#93c5fd" font-size="7.5" font-family="monospace">token: $radius-lg</text>
+        </g>
+
+        <!-- Nested UI Slot / Interactive Row -->
+        <rect x="16" y="42" width="248" height="42" rx="6" fill="#1f2937" stroke="#374151" stroke-width="1" />
+        <rect x="26" y="52" width="22" height="22" rx="4" fill="#3b82f6" opacity="0.2" />
+        <path d="M 33,63 L 36,66 L 42,59" stroke="#60a5fa" stroke-width="1.5" fill="none" />
+        <text x="56" y="61" fill="#f3f4f6" font-size="10" font-weight="600">Enterprise Checkout API</text>
+        <text x="56" y="73" fill="#9ca3af" font-size="8">Latency: 48ms &bull; 88 Grade A</text>
+
+        <!-- Interactive Switch -->
+        <g class="ui-switch" transform="translate(220, 53)">
+          <rect x="0" y="0" width="34" height="20" rx="10" fill="#2563eb" />
+          <circle class="switch-knob" cx="24" cy="10" r="7" fill="#ffffff" />
+        </g>
+
+        <!-- Auto-Layout Padding Markers & Metric Card -->
+        <g transform="translate(16, 96)">
+          <rect x="0" y="0" width="118" height="60" rx="6" fill="#1e293b" stroke="#334155" />
+          <text x="12" y="22" fill="#94a3b8" font-size="8" font-family="monospace">ALIGNMENT</text>
+          <text x="12" y="42" fill="#38bdf8" font-size="14" font-weight="700">100%</text>
+          <text x="58" y="42" fill="#64748b" font-size="8">Token Parity</text>
+        </g>
+
+        <g transform="translate(144, 96)">
+          <rect x="0" y="0" width="120" height="60" rx="6" fill="#1e293b" stroke="#334155" />
+          <text x="12" y="22" fill="#94a3b8" font-size="8" font-family="monospace">OPERATIONAL</text>
+          <text x="12" y="42" fill="#10b981" font-size="14" font-weight="700">$300M+</text>
+          <text x="68" y="42" fill="#64748b" font-size="8">Efficiency</text>
+        </g>
+
+        <text x="16" y="175" fill="#60a5fa" font-size="7.5" font-family="monospace">auto-layout: flex-col &bull; gap: 12px &bull; padding: 16px</text>
+      </g>
+
+      <!-- UX System Status Tag -->
+      <rect x="180" y="275" width="138" height="24" rx="4" fill="#1e293b" stroke="#3b82f6" />
+      <text x="188" y="290" fill="#60a5fa" font-size="9" font-family="monospace">&#10003; PRODUCTION TOKENS</text>
+    </g>
+
+    <!-- THE SWEEP SCANNER BEAM -->
+    <g class="scanner-group">
+      <line class="scan-laser-line" x1="170" y1="0" x2="170" y2="320" stroke="#38bdf8" stroke-width="2" />
+      <rect class="scan-laser-glow" x="150" y="0" width="20" height="320" fill="url(#scanBeamComponent)" />
+    </g>
+  </svg>
+</div>
+
+<style>
+  .joinery-ux-stage {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    background: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stage-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .scan-clip-rect {
+    animation: sweepClip 6s ease-in-out infinite alternate;
+  }
+
+  .scan-laser-line {
+    animation: sweepLaser 6s ease-in-out infinite alternate;
+  }
+
+  .scan-laser-glow {
+    animation: sweepLaserGlow 6s ease-in-out infinite alternate;
+  }
+
+  .switch-knob {
+    animation: toggleKnob 6s ease-in-out infinite alternate;
+  }
+
+  @keyframes sweepClip {
+    0% { width: 25px; }
+    100% { width: 320px; }
+  }
+
+  @keyframes sweepLaser {
+    0% { transform: translateX(-145px); }
+    100% { transform: translateX(150px); }
+  }
+
+  @keyframes sweepLaserGlow {
+    0% { transform: translateX(-145px); opacity: 0.2; }
+    50% { opacity: 0.8; }
+    100% { transform: translateX(150px); opacity: 0.2; }
+  }
+
+  @keyframes toggleKnob {
+    0%, 45% { cx: 10px; }
+    55%, 100% { cx: 24px; }
+  }
+</style>

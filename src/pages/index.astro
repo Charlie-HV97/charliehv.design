@@ -4,35 +4,31 @@ import { featuredProjects, craftProjects } from '../content/projects';
 ---
 
 <BaseLayout
-  title="Charlie Herbozo-Vidal | Senior Design Manager & Product Strategist (NYC)"
-  description="Charlie Herbozo-Vidal is a New York City-based Senior Design Manager & Product Strategist leading enterprise product teams, AI-driven prototyping systems, scalable design systems, and omnichannel UX architecture."
+  title="Charlie Herbozo-Vidal | Principal Product Designer & Systems Strategist (NYC)"
+  description="Charlie Herbozo-Vidal is a New York City-based Principal Product Designer & Systems Strategist leading enterprise product systems, AI-driven prototyping, scalable design tokens, and omnichannel architecture."
   image="/images/og-cover.png"
   passwordProtected={false}
 >
-  <!-- Executive Work Header -->
-  <header class="work-hero-header">
-    <div class="hero-graphic-section">
-      <img
-        src="/images/splash-illustration.png"
-        alt="Charlie Herbozo-Vidal Design Process Wireframe"
-        class="hero-graphic-img"
-      />
-    </div>
-
-    <div class="hero-intro-section">
+  <!-- Work Hero: Pure Typography (Path 1) -->
+  <header class="work-hero-typographic">
+    <div class="hero-content">
       <h1 class="hero-name">Charlie Herbozo-Vidal</h1>
 
       <p class="hero-subtitle">
-        Senior Design Manager &amp; Product Strategist
+        Principal Product Designer &amp; Systems Strategist
       </p>
 
-      <p class="hero-summary">
-        Guiding high-impact design teams and architecting omnichannel product ecosystems at enterprise scale. Grounded in systems engineering, behavioral research, and measurable business growth.
+      <p class="hero-lead">
+        I lead product design at the intersection of complex systems, behavioral strategy, and emerging technology.
+      </p>
+
+      <p class="hero-body">
+        With a background in industrial design and engineering, I bridge technical constraints, design excellence, and business value, creating scalable platforms that solve high-friction operational challenges and drive measurable business growth at massive scale.
       </p>
 
       <div class="hero-actions-row">
         <a href="/about" class="btn-hero-philosophy">
-          Leadership Philosophy &rarr;
+          About &amp; Core Philosophy &rarr;
         </a>
 
         <div class="hero-social-row">
@@ -93,10 +89,7 @@ import { featuredProjects, craftProjects } from '../content/projects';
     <!-- Section: Strategic Leadership Case Studies -->
     <div class="section-header-block">
       <div class="section-eyebrow">Enterprise Systems &amp; Strategy</div>
-      <h2 class="section-heading">Strategic Leadership Case Studies</h2>
-      <p class="section-subtext">
-        Omnichannel transformations, complex healthcare workflows, design systems architecture, and nationwide retail rollouts.
-      </p>
+      <h2 class="section-heading">Featured Product &amp; Systems Case Studies</h2>
     </div>
 
     <div class="leadership-projects-grid">
@@ -119,7 +112,7 @@ import { featuredProjects, craftProjects } from '../content/projects';
             {project.subtitle && <p class="card-subtitle">{project.subtitle}</p>}
             <p class="card-description">{project.description}</p>
             <div class="card-footer-meta">
-              <span class="card-role-label"><strong>Leadership Role:</strong> {project.role}</span>
+              <span class="card-role-label"><strong>Role:</strong> {project.role}</span>
               <span class="card-arrow">&rarr;</span>
             </div>
           </div>
@@ -131,9 +124,6 @@ import { featuredProjects, craftProjects } from '../content/projects';
     <div class="section-header-block section-craft-spacing">
       <div class="section-eyebrow">Physical Craft &amp; Space</div>
       <h2 class="section-heading">Industrial Design &amp; Photography</h2>
-      <p class="section-subtext">
-        Grounding digital systems in physical space: explorations in solid wood joinery, functional objects, and environmental photography.
-      </p>
     </div>
 
     <div class="craft-projects-grid">

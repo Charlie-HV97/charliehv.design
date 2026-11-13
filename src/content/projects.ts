@@ -1,5 +1,5 @@
 // Project data for the portfolio
-// Curated for Senior Design Manager & Product Strategy positioning
+// Curated for Principal Product Designer & Systems Strategy positioning
 
 export interface Project {
   slug: string;
@@ -29,44 +29,44 @@ export const featuredProjects: Project[] = [
     slug: 'point-of-sale',
     title: 'Next-Gen Point of Sale Modernization',
     subtitle: 'Enterprise Retail Architecture Across Thousands of Locations',
-    category: 'Enterprise Systems & Research Leadership',
-    role: 'Design & Research Lead (Managed 3 UX Researchers)',
-    impactMetric: '$300M+ Operational Savings | Nationwide Rollout',
+    category: 'Enterprise Systems Architecture & Hardware UX',
+    role: 'Principal Design & Research Lead',
+    impactMetric: '$300M+ Operational Savings | 9,000+ Stores',
     description:
-      'Directed research and product design for a multi-phased modernization of CVS’s legacy POS across thousands of retail stores, unlocking $300M+ in operational savings and elevating platform usability to 88 Grade A.',
+      'Led the end-to-end design and research strategy to modernize CVS’s retail checkout across 9,000+ stores. Untangled decades of legacy technical debt and physical cashier ergonomics, elevating platform usability to an 88 Grade A while delivering over $300M in operational savings.',
     coverImage: '/images/covers/live_02.png',
   },
   {
     slug: 'loyalty-and-strategy',
     title: 'Omnichannel Loyalty & Strategy',
     subtitle: 'CVS ExtraCare & ExtraCare Plus (80M+ Members)',
-    category: 'Omnichannel Product Strategy & Growth',
+    category: 'Consumer Growth & Monetization',
     role: 'Lead Product Designer & Growth Strategist',
     impactMetric: '$60M Incremental Margin | 80M+ Active Members',
     description:
-      'Led the end-to-end design strategy for CVS’s flagship loyalty program across 80M+ active members, architecting frictionless in-lane enrollment and in-app gamification that generated $60M in incremental margin.',
+      'Led product design and conversion strategy for the nation\'s largest retail loyalty ecosystem. Built frictionless in-lane enrollment flows and in-app gamification that generated $60M in incremental margin across 80M+ active members.',
     coverImage: '/images/covers/live_01.png',
   },
   {
     slug: 'specialty-pharmacy',
     title: 'Specialty Pharmacy & Clinical AI',
     subtitle: 'Complex Medical Verification & Human-in-the-Loop AI',
-    category: 'Healthcare Workflows & Human-in-the-Loop AI',
-    role: 'Lead Product Designer & UX Researcher',
-    impactMetric: 'Addressed Root Cause of 80% Bad Debt',
+    category: 'Healthcare Systems & Human-in-the-Loop AI',
+    role: 'Lead Product Designer & Lead Researcher',
+    impactMetric: 'Mitigated Root Cause of 80% Bad Debt',
     description:
-      'Transformed dense medical workflows for specialty pharmacy representatives and designed trustworthy, human-in-the-loop AI verification patterns that mitigate clinical error and safeguard patient care.',
+      'Transformed dense verification workflows for specialty pharmacy representatives, designing trustworthy, human-in-the-loop AI interfaces that mitigate clinical risk and safeguard patient care.',
     coverImage: '/images/covers/live_06.png',
   },
   {
     slug: 'design-systems',
     title: 'Enterprise Design Systems Engineering',
     subtitle: 'Multi-Platform Tokens, Slot Architecture & Governance',
-    category: 'Design Systems Governance & Developer Parity',
+    category: 'Design Systems Architecture & Developer Parity',
     role: 'Design Systems Lead',
-    impactMetric: '50% Reduction in Production Design Overhead',
+    impactMetric: '50% Reduction in Production Overhead',
     description:
-      'Architected and governed scalable design tokens and slot-based component libraries across customer-facing and colleague-facing platforms, bridging design and engineering to accelerate feature delivery.',
+      'Architected multi-platform design tokens and component libraries across customer-facing and colleague platforms, establishing tight developer parity and cutting redundant production overhead across engineering teams.',
     coverImage: '/images/covers/live_05.png',
   },
   {
@@ -74,10 +74,10 @@ export const featuredProjects: Project[] = [
     title: 'UX@CVS 2026: Enterprise Community & Analytics',
     subtitle: 'Unifying 3 Business Units & Real-Time Measurement',
     category: 'Enterprise Design Operations & Culture',
-    role: 'Planning Committee Member & Analytics Platform Lead',
+    role: 'Planning Committee & Analytics Platform Lead',
     impactMetric: 'NPS 67 | 493 Attendees Across 5 Business Units',
     description:
-      'Eliminated IT access barriers across CVS, Aetna, and Caremark to open our company-wide UX conference, replacing an organizational blind spot with a zero-dependency web app and real-time analytics dashboard.',
+      'Eliminated organizational IT barriers across CVS, Aetna, and Caremark to open our company-wide UX conference, building a zero-dependency web application and real-time analytics dashboard.',
     coverImage: '/images/ux-conference/2_live_analytics_dashboard_showi.png',
   },
   {
@@ -88,7 +88,7 @@ export const featuredProjects: Project[] = [
     role: 'Creative Lead & Strategist',
     impactMetric: 'Unified In-Store, Digital & CRM Channels',
     description:
-      'Served as central creative node aligning physical in-store collateral, CRM communications, and digital experiences for high-visibility nationwide loyalty initiatives.',
+      'Served as the central creative node aligning physical in-store collateral, CRM communications, and digital experiences for high-visibility nationwide loyalty initiatives.',
     coverImage: '/images/covers/live_04.png',
   },
 ];

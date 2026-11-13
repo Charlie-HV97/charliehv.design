@@ -151,73 +151,29 @@ const craftProjects = [
     {isSplash ? (
       <slot />
     ) : (
-      <div class="site-layout">
-        <header class="mobile-header">
-          <a href="/" class="mobile-logo">Charlie HV Design</a>
-          <button class="hamburger-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+      <div class="site-shell">
+        <!-- Modern Global Top Header (Auto-hidden on initial home view, glides in on scroll; persistent on all subpages) -->
+        <header class={`site-header ${currentPath === '/' ? 'header-on-home' : ''}`} id="globalSiteHeader">
+          <div class="header-inner">
+            <a href="/" class="header-brand">
+              <span class="brand-name">Charlie Herbozo-Vidal</span>
+              <span class="brand-title">Principal Product Designer &amp; Systems Strategist</span>
+            </a>
+            <nav class="header-nav">
+              <a href="/" class={`header-link ${currentPath === '/' ? 'active' : ''}`}>Work</a>
+              <a href="/about" class={`header-link ${currentPath === '/about' ? 'active' : ''}`}>About</a>
+              <a href="/contact" class={`header-link ${currentPath === '/contact' ? 'active' : ''}`}>Contact</a>
+              <a href="http://www.linkedin.com/in/charlie-herbozovidal" target="_blank" rel="noopener" class="header-btn-linkedin" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 0-3.06 1.53 1.53 0 0 0 0 3.06m1.4 9.74V10.13H5.06v8.37z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </nav>
+          </div>
         </header>
 
-        <aside class="sidebar" id="sidebar">
-          <div class="sidebar-header">
-            <a href="/" class="sidebar-logo">
-              Charlie HV<br />Design
-            </a>
-            <div class="sidebar-subtitle">Welcome to my portfolio</div>
-          </div>
-
-          <nav class="sidebar-nav">
-            <a href="/" class={`nav-group-title ${currentPath === '/' ? 'active' : ''}`}>
-              Leadership Work
-            </a>
-
-            <div class="nav-sublinks">
-              {featuredProjects.map((p) => (
-                <a
-                  href={p.href}
-                  class={`nav-sublink ${currentPath === p.href ? 'active' : ''}`}
-                >
-                  {p.name}
-                </a>
-              ))}
-            </div>
-
-            <div class="nav-group-title nav-group-craft">
-              Industrial Design
-            </div>
-
-            <div class="nav-sublinks">
-              {craftProjects.map((p) => (
-                <a
-                  href={p.href}
-                  class={`nav-sublink ${currentPath === p.href ? 'active' : ''}`}
-                >
-                  {p.name}
-                </a>
-              ))}
-            </div>
-
-            <div class="sidebar-footer-nav">
-              <a
-                href="/about"
-                class={`nav-link-primary ${currentPath === '/about' ? 'active' : ''}`}
-              >
-                About
-              </a>
-              <a
-                href="/contact"
-                class={`nav-link-primary ${currentPath === '/contact' ? 'active' : ''}`}
-              >
-                Contact
-              </a>
-            </div>
-          </nav>
-        </aside>
-
-        <main class={`main-content ${currentPath === '/' ? 'main-content-home' : ''}`}>
+        <main class="main-content">
           <slot />
         </main>
       </div>
@@ -282,12 +238,17 @@ const craftProjects = [
     )}
 
     <script is:inline>
-      const menuBtn = document.getElementById('mobileMenuBtn');
-      const sidebar = document.getElementById('sidebar');
-      if (menuBtn && sidebar) {
-        menuBtn.addEventListener('click', () => {
-          sidebar.classList.toggle('open');
-        });
+      const header = document.getElementById('globalSiteHeader');
+      if (header && header.classList.contains('header-on-home')) {
+        const handleScroll = () => {
+          if (window.scrollY > 200) {
+            header.classList.add('is-scrolled');
+          } else {
+            header.classList.remove('is-scrolled');
+          }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
       }
     </script>
   </body>
